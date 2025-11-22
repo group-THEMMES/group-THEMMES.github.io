@@ -34,11 +34,11 @@
         .carousel-image {
             /* 이미지 전환을 위한 부드러운 트랜지션 설정 (1초 동안 투명도 변화) */
             transition: opacity 1000ms ease-in-out;
-            /* 첫 번째 이미지를 제외한 나머지는 투명하게 시작 */
+            /* 모든 이미지는 투명하게 시작 */
             opacity: 0; 
         }
-        /* 첫 번째 이미지 또는 현재 활성화된 이미지를 보이도록 설정 */
-        .carousel-image[data-index="0"] {
+        /* 현재 활성화된 이미지를 보이도록 설정 (JS에서 이 클래스를 토글합니다) */
+        .active-image {
             opacity: 100;
         }
     </style>
@@ -189,4 +189,162 @@
         <section id="team-page" class="page hidden">
             <h2 class="text-4xl font-extrabold text-gray-900 mb-6 border-b pb-2">Meet Our Team</h2>
             
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- P.I. / Director -->
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center transform hover:scale-105 transition duration-300">
+                    <!-- 💡 PI 사진 URL을 여기에 넣어주세요. (현재는 ./images/team_pi.png) -->
+                    <img class="w-24 h-24 mx-auto rounded-full mb-4 object-cover border-4 border-blue-200" src="./images/team_pi.png" alt="PI Photo">
+                    <h3 class="text-xl font-bold text-gray-900">Dr. Jane Doe</h3>
+                    <p class="text-blue-600 font-medium">Principal Investigator</p>
+                    <p class="text-sm text-gray-500 mt-2">Email: jane.doe@lab.edu</p>
+                </div>
+                <!-- Post-doc -->
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center transform hover:scale-105 transition duration-300">
+                    <img class="w-24 h-24 mx-auto rounded-full mb-4 object-cover border-4 border-gray-200" src="https://placehold.co/100x100/475569/ffffff?text=PD" alt="Postdoc Photo">
+                    <h3 class="text-xl font-bold text-gray-900">Dr. John Smith</h3>
+                    <p class="text-gray-600">Postdoctoral Fellow</p>
+                </div>
+                <!-- Ph.D. Student -->
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center transform hover:scale-105 transition duration-300">
+                    <img class="w-24 h-24 mx-auto rounded-full mb-4 object-cover border-4 border-gray-200" src="https://placehold.co/100x100/64748b/ffffff?text=PHD" alt="Student Photo">
+                    <h3 class="text-xl font-bold text-gray-900">Alice Johnson</h3>
+                    <p class="text-gray-600">Ph.D. Candidate</p>
+                </div>
+                <!-- Master's Student -->
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center transform hover:scale-105 transition duration-300">
+                    <img class="w-24 h-24 mx-auto rounded-full mb-4 object-cover border-4 border-gray-200" src="https://placehold.co/100x100/94a3b8/ffffff?text=MS" alt="Student Photo">
+                    <h3 class="text-xl font-bold text-gray-900">Bob Williams</h3>
+                    <p class="text-gray-600">Master's Student</p>
+                </div>
+            </div>
+
+            <div class="mt-10 p-6 bg-blue-50 rounded-xl border border-blue-200">
+                <h3 class="text-2xl font-semibold text-blue-700 mb-3">Open Positions</h3>
+                <p class="text-blue-600">We are currently seeking one Postdoctoral Scholar and two Ph.D. students interested in Advanced AI Modeling. Please contact Dr. Doe for more details.</p>
+                <a href="mailto:jane.doe@lab.edu" class="inline-block mt-4 px-6 py-2 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition duration-150 shadow-md">
+                    Apply / Contact Us
+                </a>
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- PUBLICATIONS PAGE -->
+        <!-- ============================================== -->
+        <section id="publications-page" class="page hidden">
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-6 border-b pb-2">Publications</h2>
+            <div class="space-y-4">
+                <!-- PUBLICATIONS: 각 논문 항목의 구조를 확인하고 내용을 복사/붙여넣기하여 추가하세요 -->
+                <div class="bg-white p-4 rounded-xl shadow-md border-l-4 border-red-500">
+                    <p class="text-lg font-semibold text-blue-700">1. Real-time Predictive Modeling using Spatio-Temporal Graph Networks</p>
+                    <p class="text-gray-600">J. Smith, A. Johnson, J. Doe. <span class="text-sm italic text-gray-500">Nature Communications, 2024.</span></p>
+                    <a href="#" class="text-sm text-blue-500 hover:text-blue-700"> [Abstract]</a> |
+                    <a href="#" class="text-sm text-blue-500 hover:text-blue-700"> [Full PDF]</a>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-md border-l-4 border-red-500">
+                    <p class="text-lg font-semibold text-blue-700">2. Enhancing Solar Cell Efficiency through Nano-Structure Optimization</p>
+                    <p class="text-gray-600">B. Williams, J. Doe. <span class="text-sm italic text-gray-500">Advanced Materials, 2023.</span></p>
+                    <a href="#" class="text-sm text-blue-500 hover:text-blue-700"> [Abstract]</a> |
+                    <a href="#" class="text-sm text-blue-500 hover:text-blue-700"> [Journal Link]</a>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-md border-l-4 border-red-500">
+                    <p class="text-lg font-semibold text-blue-700">3. A Novel Framework for Large-Scale Genomic Data Analysis</p>
+                    <p class="text-gray-600">A. Johnson, J. Smith. <span class="text-sm italic text-gray-500">Bioinformatics Journal, 2023.</span></p>
+                    <a href="#" class="text-sm text-blue-500 hover:text-blue-700"> [Abstract]</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-sm">
+            <p>&copy; 2024 Research Lab. All rights reserved. | Built with HTML & Tailwind CSS.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 페이지 전환 로직
+        function showPage(pageId) {
+            // 1. 모든 페이지 숨기기
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.add('hidden');
+            });
+            
+            // 2. 원하는 페이지 보이기
+            const targetPage = document.getElementById(pageId + '-page');
+            if (targetPage) {
+                targetPage.classList.remove('hidden');
+            }
+
+            // 3. 네비게이션 링크 활성화 상태 업데이트 (선택적)
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('font-bold', 'text-blue-600', 'bg-gray-100');
+                link.classList.add('text-gray-600');
+
+                if (link.getAttribute('data-page') === pageId) {
+                    link.classList.add('font-bold', 'text-blue-600', 'bg-gray-100');
+                    link.classList.remove('text-gray-600');
+                }
+            });
+
+            // URL의 해시를 업데이트하여 새로고침해도 페이지 상태 유지 (선택적)
+            window.location.hash = pageId;
+
+            // 맨 위로 스크롤
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // ==============================================
+        // 캐러셀 (슬라이드 쇼) 로직 추가
+        // ==============================================
+        let currentImageIndex = 0;
+        let carouselImages = [];
+
+        function showNextImage() {
+            if (carouselImages.length < 2) return; // 이미지가 2개 미만이면 실행 중단
+
+            // 1. 현재 보이는 이미지에서 active 클래스 제거 (투명도 0으로 전환)
+            carouselImages[currentImageIndex].classList.remove('active-image');
+
+            // 2. 다음 인덱스 계산 (순환)
+            currentImageIndex = (currentImageIndex + 1) % carouselImages.length;
+
+            // 3. 다음 이미지에 active 클래스 추가 (투명도 100으로 전환)
+            carouselImages[currentImageIndex].classList.add('active-image');
+        }
+
+        function startCarousel() {
+            // 모든 'carousel-image' 클래스를 가진 요소를 가져옴
+            carouselImages = document.querySelectorAll('.carousel-image');
+            
+            if (carouselImages.length > 0) {
+                // DOM 로드 후 첫 번째 이미지를 보이도록 active 클래스 추가 (JS에서 명시적으로 제어)
+                carouselImages[0].classList.add('active-image');
+
+                if (carouselImages.length > 1) {
+                    // 5초(5000ms)마다 showNextImage 함수 실행
+                    setInterval(showNextImage, 5000); 
+                }
+            }
+        }
+        
+        // ==============================================
+        // 초기 로드 시 페이지 및 캐러셀 설정
+        // ==============================================
+        document.addEventListener('DOMContentLoaded', () => {
+            const initialPage = window.location.hash ? window.location.hash.substring(1) : 'home';
+            showPage(initialPage);
+            
+            // 캐러셀 시작
+            startCarousel(); 
+        });
+
+        // 브라우저 뒤로 가기/앞으로 가기 버튼 처리
+        window.addEventListener('hashchange', () => {
+            const newPage = window.location.hash.substring(1) || 'home';
+            showPage(newPage);
+        });
+    </script>
+</body>
+</html>
