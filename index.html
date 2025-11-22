@@ -85,9 +85,9 @@
         
         <!-- ============================================== --><!-- HOME PAGE --><!-- ============================================== --><section id="home-page" class="page active">
             <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
-                <!-- 2. Welcome 헤딩 변경 (색상 제거) -->
+                <!-- Welcome 헤딩 변경 (색상 제거) -->
                 <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Welcome</h2>
-                <!-- 3. 소개 내용 변경 -->
+                <!-- 소개 내용 변경 -->
                 <p class="text-lg text-gray-600">
                     We are dedicated to exploring the frontiers of technology and science. Our mission is to innovate and solve real-world problems through theoretical approaches.
                 </p>
@@ -188,90 +188,113 @@
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow-lg border-t-4" style="border-color:var(--color-lab-primary);">
                     <h3 class="text-2xl font-semibold mb-3">Join Us</h3>
-                    <!-- 4. Join Us 내용 변경 -->
+                    <!-- Join Us 내용 변경 -->
                     <p class="text-gray-600">We are always looking for talented and passionate candidates to join THEMMES group. Check the Team page for openings!</p>
                 </div>
             </div>
         </section>
 
         <!-- ============================================== --><!-- RESEARCH PAGE --><!-- ============================================== --><section id="research-page" class="page hidden">
-            <h2 class="text-4xl font-extrabold text-gray-900 mb-6 border-b pb-2">Research Areas</h2>
             
-            <!-- 소개글 --><p class="text-lg text-gray-700 mb-10 p-4 rounded-xl border-l-4" style="border-color:var(--color-lab-primary); background-color:var(--color-lab-primary-lighter);">
-                THEMMES group has been investigating various energy materials and systems, i.e., electrochemistry, catalysis, energy storage, and materials chemistry. We have built up multiscale simulation skills based on a strong background on computational chemistry. In the era of automisation, the artificial intelligence is actively employed to accelerate our investigation. Furthermore, those theoretical findings are to be validated by experimental measurements. We both collaborate with many experimental groups and develop our own lab for this.
-            </p>
-
-            <!-- TEAM Projects -->
-            <div class="space-y-8 mb-16">
-                <!-- RESEARCH PROJECT 1: TEAM-reaX -->
-                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <h3 class="text-2xl font-semibold mb-4" style="color:var(--color-lab-primary);">TEAM-reaX</h3>
-                    <p class="text-gray-600 mb-4">Focusing on deep learning architectures for real-time data processing and predictive analytics. Current work involves reinforcement learning in complex simulation environments.</p>
-                    
-                    <ul class="list-disc list-inside space-y-1 text-gray-700 ml-4 border-l-2 pl-4 border-gray-100 mt-4">
-                        <li>Development of novel spatio-temporal graph models.</li>
-                        <li>Application in smart city traffic prediction systems.</li>
-                        <li>Collaboration with industry partners on data privacy.</li>
-                    </ul>
-
-                    <a href="#" class="mt-4 inline-block text-sm hover:text-[--color-lab-primary-dark] font-medium transition duration-150" style="color:var(--color-lab-primary);">View Project Details &rarr;</a>
-                </div>
+            <div id="main-research-view">
+                <h2 class="text-4xl font-extrabold text-gray-900 mb-6 border-b pb-2">Research Areas</h2>
                 
-                <!-- RESEARCH PROJECT 2: TEAM-Xtal -->
-                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <h3 class="text-2xl font-semibold mb-4" style="color:var(--color-lab-primary);">TEAM-Xtal</h3>
-                    <p class="text-gray-600 mb-4">Investigating new materials and designs for high-efficiency solar cells and energy storage solutions. This includes photochemical and electrochemical studies.</p>
-                    
-                    <ul class="list-disc list-inside space-y-1 text-gray-700 ml-4 border-l-2 pl-4 border-gray-100 mt-4">
-                        <li>Designing novel cathode/anode materials for next-generation batteries.</li>
-                        <li>Photocatalytic system optimization for sustainable chemical production.</li>
-                        <li>In-situ spectroscopic analysis of electrochemical interfaces.</li>
-                    </ul>
+                <!-- 소개글 변경 -->
+                <p class="text-lg text-gray-700 mb-10 p-4 rounded-xl border-l-4" style="border-color:var(--color-lab-primary); background-color:var(--color-lab-primary-lighter);">
+                    THEMMES group has been investigating various (photo-)electrochemical systems. We have built up multiscale simulation skills based on a strong background on computational chemistry. In the era of automisation, the artificial intelligence is actively employed to accelerate our investigation. Furthermore, those theoretical findings are to be validated by experimental measurements. We thus actively collaborate with many experimental groups in the world.
+                </p>
 
-                    <a href="#" class="mt-4 inline-block text-sm hover:text-[--color-lab-primary-dark] font-medium transition duration-150" style="color:var(--color-lab-primary);">View Project Details &rarr;</a>
+                <!-- TEAM Projects -->
+                <div class="space-y-8 mb-16" id="team-projects">
+                    
+                    <!-- RESEARCH PROJECT 1: TEAM-reaX -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-l-4" style="border-color:var(--color-lab-primary);">
+                        <h3 class="text-2xl font-semibold mb-4" style="color:var(--color-lab-primary);">TEAM-reaX</h3>
+                        <p class="text-gray-600 mb-4">Understanding reaction dynamics and kinetics over the (photo-)electrochemical system is our main goal.</p>
+                        
+                        <ul class="list-disc list-inside space-y-1 text-gray-700 ml-4 border-l-2 pl-4 border-gray-100 mt-4">
+                            <li>Reaction dynamics over (photo-)electrochemical systems</li>
+                            <li>Electron transfer during the chemical process</li>
+                            <li>Kinetics in multiscale</li>
+                        </ul>
+
+                        <a href="#" class="mt-4 inline-block text-sm hover:text-[--color-lab-primary-dark] font-medium transition duration-150" style="color:var(--color-lab-primary);" onclick="showProjectDetail('team-reax'); return false;">View Project Details &rarr;</a>
+                    </div>
+                    
+                    <!-- RESEARCH PROJECT 2: TEAM-Xtal -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-l-4" style="border-color:var(--color-lab-primary);">
+                        <h3 class="text-2xl font-semibold mb-4" style="color:var(--color-lab-primary);">TEAM-Xtal</h3>
+                        <p class="text-gray-600 mb-4">Investigating materials for various (photo-)electrochemical systems focusing on realising the nature of disorderness.</p>
+                        
+                        <ul class="list-disc list-inside space-y-1 text-gray-700 ml-4 border-l-2 pl-4 border-gray-100 mt-4">
+                            <li>Reconstruction/Degradation during the chemical process</li>
+                            <li>Amorphous or ill-defined structure</li>
+                            <li>Defect or grain boundaries</li>
+                        </ul>
+
+                        <a href="#" class="mt-4 inline-block text-sm hover:text-[--color-lab-primary-dark] font-medium transition duration-150" style="color:var(--color-lab-primary);" onclick="showProjectDetail('team-xtal'); return false;">View Project Details &rarr;</a>
+                    </div>
+                    
+                    <!-- RESEARCH PROJECT 3: TEAM-chXg -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-l-4" style="border-color:var(--color-lab-primary);">
+                        <h3 class="text-2xl font-semibold mb-4" style="color:var(--color-lab-primary);">TEAM-chXg</h3>
+                        <p class="text-gray-600 mb-4">Understanding charging dynamics and atomic details of interphase.</p>
+                        
+                        <ul class="list-disc list-inside space-y-1 text-gray-700 ml-4 border-l-2 pl-4 border-gray-100 mt-4">
+                            <li>Ion transport</li>
+                            <li>Charging dynamics</li>
+                            <li>Interphasial phenomena</li>
+                        </ul>
+
+                        <a href="#" class="mt-4 inline-block text-sm hover:text-[--color-lab-primary-dark] font-medium transition duration-150" style="color:var(--color-lab-primary);" onclick="showProjectDetail('team-chxg'); return false;">View Project Details &rarr;</a>
+                    </div>
                 </div>
+
+                <!-- Methodology Section -->
+                <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b pb-2">Methodology</h2>
+                <div class="space-y-8">
+                    <!-- 1. Multiscale Simulation -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-l-4" style="border-color:var(--color-lab-primary);">
+                        <h3 class="text-2xl font-semibold mb-3" style="color:var(--color-lab-primary-dark);">Multiscale Simulation</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Multiscale simulation is a core skill in the THEMMES group. We are actively investigating various topics relevant to energy materials and systems via multiscale simulation. Simulation scale depends on the system we are interested in. We might study an origin in microscopic scale using quantum mechanics simulation technique, e.g., DFT simulation. It would be interesting to understand the phenomena in molecular scale with the help of statistical level simulation, e.g., MD simulation based on many different levels of force-field. Furthermore, it is to be observed in mesoscale simulation to match experimental findings taking advantage of its approximation, e.g., KMC or microkinetic modelling. In more large scale, we are able to utilise continuum level simulation, with the help of various user-friendly programs, e.g., COMSOL.
+                        </p>
+                    </div>
+
+                    <!-- 2. Artificial Intelligence -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-l-4" style="border-color:var(--color-lab-primary);">
+                        <h3 class="text-2xl font-semibold mb-3" style="color:var(--color-lab-primary-dark);">Artificial Intelligence</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Artificial intelligence is a general approach whilst any other area in our daily life. The THEMMES group is also interested in accelerating our investigation with this technology, e.g., using machine learning force field to construct a potential energy surface or discovering new functional materials via diverse machine learning models based on pre-built or novel database. We are happy to use various techniques from classical machine learning to deep learning. We are not only trying to take advantage of pre-built models and database, but willing to develop new models and construct database. Currently, we are focusing on utilising many databases from simulation. It might lead us to efficiently investigate materials chemistry.
+                        </p>
+                    </div>
+
+                    <!-- 3. Experimental Validation -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-l-4" style="border-color:var(--color-lab-primary);">
+                        <h3 class="text-2xl font-semibold mb-3" style="color:var(--color-lab-primary-dark);">Experimental Validation</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Basically, the THEMMES group is theoretical energy materials modelling group, so our main focus is to be an expert to conduct multiscale simulation and understand various energy materials and systems. However, it is always a rule of thumb that the model match experimental findings. It motivates us to do experimental validation. We actively collaborate with experimental groups to get this in many research themes. We are also trying to develop our own experimental setups to corroborate our findings efficiently.
+                        </p>
+                    </div>
+                </div>
+            </div> <!-- End of main-research-view -->
+
+            <!-- Project Detail View (Initially hidden) -->
+            <div id="project-detail-view" class="hidden bg-white p-8 rounded-xl shadow-xl">
+                <button id="back-to-research-btn" class="mb-6 flex items-center text-gray-600 hover:text-gray-800 transition duration-150" onclick="showMainResearchView()"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    Back to Research Areas
+                </button>
+                <h3 id="detail-title" class="text-4xl font-extrabold text-gray-900 mb-4" style="color:var(--color-lab-primary);">Project Title</h3>
+                <p id="detail-content" class="text-xl text-gray-700 border-l-4 pl-4 py-2 mb-6"></p>
                 
-                <!-- RESEARCH PROJECT 3: TEAM-chXg -->
-                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <h3 class="text-2xl font-semibold mb-4" style="color:var(--color-lab-primary);">TEAM-chXg</h3>
-                    <p class="text-gray-600 mb-4">Applying high-throughput computational screening and machine learning to discover novel catalysts and solid-state battery electrolytes.</p>
-                    
-                    <ul class="list-disc list-inside space-y-1 text-gray-700 ml-4 border-l-2 pl-4 border-gray-100 mt-4">
-                        <li>Accelerated materials discovery via high-throughput virtual screening.</li>
-                        <li>Development of next-generation machine learning interatomic potentials.</li>
-                        <li>Molecular Dynamics simulation of ion transport in solid-state electrolytes.</li>
-                    </ul>
+                <h4 class="text-2xl font-bold mb-3 mt-8">Core Focus Areas</h4>
+                <ul id="detail-list" class="list-disc list-inside space-y-2 text-gray-600 ml-4">
+                    <!-- Details will be populated here -->
+                </ul>
 
-                    <a href="#" class="mt-4 inline-block text-sm hover:text-[--color-lab-primary-dark] font-medium transition duration-150" style="color:var(--color-lab-primary);">View Project Details &rarr;</a>
-                </div>
-            </div>
-
-            <!-- Methodology Section -->
-            <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b pb-2">Methodology</h2>
-            <div class="space-y-8">
-                <!-- 1. Multiscale Simulation -->
-                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4" style="border-color:var(--color-lab-primary);">
-                    <h3 class="text-2xl font-semibold mb-3" style="color:var(--color-lab-primary-dark);">Multiscale Simulation</h3>
-                    <p class="text-gray-700 leading-relaxed">
-                        Multiscale simulation is a core skill in the THEMMES group. We are actively investigating various topics relevant to energy materials and systems via multiscale simulation. Simulation scale depends on the system we are interested in. We might study an origin in microscopic scale using quantum mechanics simulation technique, e.g., DFT simulation. It would be interesting to understand the phenomena in molecular scale with the help of statistical level simulation, e.g., MD simulation based on many different levels of force-field. Furthermore, it is to be observed in mesoscale simulation to match experimental findings taking advantage of its approximation, e.g., KMC or microkinetic modelling. In more large scale, we are able to utilise continuum level simulation, with the help of various user-friendly programs, e.g., COMSOL.
-                    </p>
-                </div>
-
-                <!-- 2. Artificial Intelligence -->
-                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4" style="border-color:var(--color-lab-primary);">
-                    <h3 class="text-2xl font-semibold mb-3" style="color:var(--color-lab-primary-dark);">Artificial Intelligence</h3>
-                    <p class="text-gray-700 leading-relaxed">
-                        Artificial intelligence is a general approach whilst any other area in our daily life. The THEMMES group is also interested in accelerating our investigation with this technology, e.g., using machine learning force field to construct a potential energy surface or discovering new functional materials via diverse machine learning models based on pre-built or novel database. We are happy to use various techniques from classical machine learning to deep learning. We are not only trying to take advantage of pre-built models and database, but willing to develop new models and construct database. Currently, we are focusing on utilising many databases from simulation. It might lead us to efficiently investigate materials chemistry.
-                    </p>
-                </div>
-
-                <!-- 3. Experimental Validation -->
-                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4" style="border-color:var(--color-lab-primary);">
-                    <h3 class="text-2xl font-semibold mb-3" style="color:var(--color-lab-primary-dark);">Experimental Validation</h3>
-                    <p class="text-gray-700 leading-relaxed">
-                        Basically, the THEMMES group is theoretical energy materials modelling group, so our main focus is to be an expert to conduct multiscale simulation and understand various energy materials and systems. However, it is always a rule of thumb that the model match experimental findings. It motivates us to do experimental validation. We actively collaborate with experimental groups to get this in many research themes. We are also trying to develop our own experimental setups to corroborate our findings efficiently.
-                    </p>
-                </div>
             </div>
 
         </section>
@@ -344,6 +367,37 @@
     </footer>
 
     <script>
+        // Data structure to hold project details for the detail view
+        const projectDetails = {
+            'team-reax': {
+                title: 'TEAM-reaX: Reaction Dynamics and Kinetics',
+                summary: 'Understanding reaction dynamics and kinetics over the (photo-)electrochemical system is our main goal.',
+                details: [
+                    'Reaction dynamics over (photo-)electrochemical systems',
+                    'Electron transfer during the chemical process',
+                    'Kinetics in multiscale'
+                ],
+            },
+            'team-xtal': {
+                title: 'TEAM-Xtal: Investigating Disordered Materials',
+                summary: 'Investigating materials for various (photo-)electrochemical systems focusing on realising the nature of disorderness.',
+                details: [
+                    'Reconstruction/Degradation during the chemical process',
+                    'Amorphous or ill-defined structure',
+                    'Defect or grain boundaries'
+                ],
+            },
+            'team-chxg': {
+                title: 'TEAM-chXg: Charging Dynamics and Interphase',
+                summary: 'Understanding charging dynamics and atomic details of interphase.',
+                details: [
+                    'Ion transport',
+                    'Charging dynamics',
+                    'Interphasial phenomena'
+                ],
+            }
+        };
+
         // 페이지 전환 로직
         function showPage(pageId) {
             // 1. 모든 페이지 숨기기
@@ -378,7 +432,47 @@
 
             // 맨 위로 스크롤
             window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // 5. research 페이지로 돌아올 때 메인 뷰를 보여줌 (상세 페이지에서 돌아왔을 경우 대비)
+            if (pageId === 'research') {
+                showMainResearchView();
+            }
         }
+        
+        // 프로젝트 상세 보기 로직
+        function showProjectDetail(projectId) {
+            const mainView = document.getElementById('main-research-view');
+            const detailView = document.getElementById('project-detail-view');
+            const detailData = projectDetails[projectId];
+
+            if (detailData) {
+                // 상세 내용 업데이트
+                document.getElementById('detail-title').textContent = detailData.title;
+                document.getElementById('detail-content').textContent = detailData.summary;
+                
+                const detailList = document.getElementById('detail-list');
+                detailList.innerHTML = ''; // 기존 목록 초기화
+                detailData.details.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    detailList.appendChild(li);
+                });
+
+                // 뷰 전환
+                mainView.classList.add('hidden');
+                detailView.classList.remove('hidden');
+                
+                // 스크롤을 맨 위로 이동
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        // 메인 연구 목록 뷰 로직
+        function showMainResearchView() {
+            document.getElementById('main-research-view').classList.remove('hidden');
+            document.getElementById('project-detail-view').classList.add('hidden');
+        }
+
 
         // ==============================================
         // 캐러셀 (슬라이드 쇼) 로직 - 재사용 가능한 함수로 리팩토링
