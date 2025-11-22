@@ -3,17 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research Lab Homepage</title>
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>THEMMES group Homepage</title>
+    <!-- Load Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* Custom Tailwind Colors */
+        :root {
+            --color-lab-primary: #4FB6C2; /* 기본 강조 색상 */
+            --color-lab-primary-dark: #3a9ea8; /* 약간 더 어두운 버전 (hover 등에 사용) */
+            --color-lab-primary-light: #7cd5df; /* 약간 더 밝은 버전 (border 등에 사용) */
+            --color-lab-primary-lighter: #b9e9ee; /* 더 밝은 버전 (옅은 배경) */
+        }
+
+        /* Tailwind JIT compiler가 동적으로 이 변수들을 인식하도록 확장 */
+        /* 이 부분은 실제 빌드 환경에서는 Tailwind config 파일에서 설정해야 합니다. */
+        /* 여기서는 인라인 스타일과 직접적인 클래스 대체로 처리하겠습니다. */
+
         /* Custom styles for professional look */
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f8f9fa; /* Light gray background */
         }
+        .nav-link.active-nav-link { /* 활성화된 네비링크의 색상 */
+            color: var(--color-lab-primary);
+            background-color: #f0f0f0; /* 활성화된 메뉴 배경색 */
+        }
         .nav-link:hover {
-            color: #1d4ed8; /* Blue-700 on hover */
+            color: var(--color-lab-primary); /* 강조 색상 on hover */
         }
         .page-content {
             min-height: calc(100vh - 128px); /* Full height minus header and footer */
@@ -32,12 +47,9 @@
         
         /* 캐러셀 이미지를 위한 기본 스타일 */
         .carousel-image {
-            /* 이미지 전환을 위한 부드러운 트랜지션 설정 (1초 동안 투명도 변화) */
             transition: opacity 1000ms ease-in-out;
-            /* 모든 이미지는 투명하게 시작 */
             opacity: 0; 
         }
-        /* 현재 활성화된 이미지를 보이도록 설정 (JS에서 이 클래스를 토글합니다) */
         .active-image {
             opacity: 100;
         }
@@ -45,19 +57,15 @@
 </head>
 <body class="text-gray-800">
 
-    <!-- Header & Navigation -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
+    <!-- Header & Navigation --><header class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
-            <!-- Logo/Lab Name (홈으로 이동하는 기능 유지) -->
-            <div class="text-2xl font-bold text-gray-900">
-                <a href="#home" class="hover:text-blue-600 transition duration-150 nav-link" data-page="home">
-                    <span class="text-blue-600">RESEARCH</span> LAB
+            <!-- Logo/Lab Name --><div class="text-2xl font-bold text-gray-900">
+                <a href="#home" class="hover:text-[--color-lab-primary-dark] transition duration-150 nav-link" data-page="home">
+                    <span style="color:var(--color-lab-primary);">THEMMES</span> group
                 </a>
             </div>
 
-            <!-- Navigation Links (Home 버튼 제거) -->
-            <nav class="flex space-x-6">
-                <!-- <a href="#home" class="nav-link text-gray-600 font-medium transition duration-150 rounded-md p-2 hover:bg-gray-100" data-page="home">Home</a> <-- 이 부분을 제거했습니다. -->
+            <!-- Navigation Links --><nav class="flex space-x-6">
                 <a href="#research" class="nav-link text-gray-600 font-medium transition duration-150 rounded-md p-2 hover:bg-gray-100" data-page="research">Research</a>
                 <a href="#team" class="nav-link text-gray-600 font-medium transition duration-150 rounded-md p-2 hover:bg-gray-100" data-page="team">Team</a>
                 <a href="#publications" class="nav-link text-gray-600 font-medium transition duration-150 rounded-md p-2 hover:bg-gray-100" data-page="publications">Publications</a>
@@ -65,25 +73,19 @@
         </div>
     </header>
 
-    <!-- Main Content Area -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 page-content">
+    <!-- Main Content Area --><main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 page-content">
         
-        <!-- ============================================== -->
-        <!-- HOME PAGE -->
-        <!-- ============================================== -->
-        <section id="home-page" class="page active">
+        <!-- ============================================== --><!-- HOME PAGE --><!-- ============================================== --><section id="home-page" class="page active">
             <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
-                <h2 class="text-4xl font-extrabold text-blue-600 mb-4">Welcome to Our Lab</h2>
+                <h2 class="text-4xl font-extrabold text-gray-900 mb-4" style="color:var(--color-lab-primary);">Welcome THEMMES</h2>
                 <p class="text-lg text-gray-600">
                     We are dedicated to exploring the frontiers of technology and science. Our mission is to innovate and solve real-world problems through rigorous research.
                 </p>
             </div>
 
-            <!-- Lab Photo Carousels (두 개의 절반 너비 프레임) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <!-- Lab Photo Carousels (두 개의 절반 너비 프레임) --><div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                 
-                <!-- 첫 번째 캐러셀 (Lab Photos) -->
-                <div class="relative overflow-hidden rounded-xl shadow-xl h-80 w-full bg-white flex items-center justify-center border-2 border-white">
+                <!-- 첫 번째 캐러셀 (Lab Photos) --><div class="relative overflow-hidden rounded-xl shadow-xl h-80 w-full bg-white flex items-center justify-center border-2 border-white">
                     <div id="lab-photos-carousel" class="w-full h-full relative">
                         <img 
                             src="./images/IMG_0184.jpg" 
@@ -130,10 +132,8 @@
                     </div>
                 </div>
 
-                <!-- 두 번째 캐러셀 (Outcomes Photos) - './outcomes/' 경로 사용 및 파일명 업데이트 -->
-                <div class="relative overflow-hidden rounded-xl shadow-xl h-80 w-full bg-white flex items-center justify-center border-2 border-white">
+                <!-- 두 번째 캐러셀 (Outcomes Photos) --><div class="relative overflow-hidden rounded-xl shadow-xl h-80 w-full bg-white flex items-center justify-center border-2 border-white">
                     <div id="outcomes-carousel" class="w-full h-full relative">
-                        <!-- 파일명 업데이트: xging.jpeg -->
                         <img 
                             src="./outcomes/xging.jpeg" 
                             alt="Outcome Photo X-Ging" 
@@ -141,7 +141,6 @@
                             data-index="0"
                             onerror="this.onerror=null; this.src='https://placehold.co/600x320/059669/ffffff?text=OUTCOME+X-Ging';"
                         >
-                        <!-- 파일명 업데이트: xtal.jpeg -->
                         <img 
                             src="./outcomes/xtal.jpeg" 
                             alt="Outcome Photo Xtal" 
@@ -149,7 +148,6 @@
                             data-index="1"
                             onerror="this.onerror=null; this.src='https://placehold.co/600x320/10b981/ffffff?text=OUTCOME+Xtal';"
                         >
-                        <!-- 파일명 업데이트: catal.jpeg -->
                         <img 
                             src="./outcomes/catal.jpeg" 
                             alt="Outcome Photo Catalysis" 
@@ -157,7 +155,6 @@
                             data-index="2"
                             onerror="this.onerror=null; this.src='https://placehold.co/600x320/34d399/ffffff?text=OUTCOME+Catal';"
                         >
-                         <!-- 파일명 추가: echem.jpeg -->
                          <img 
                             src="./outcomes/echem.jpeg" 
                             alt="Outcome Photo Echem" 
@@ -171,131 +168,111 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500">
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4" style="border-color:var(--color-lab-primary);">
                     <h3 class="text-2xl font-semibold mb-3">Our Vision</h3>
                     <p class="text-gray-600">To be a leading research group recognized globally for our high-impact discoveries and collaborative environment.</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500">
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4" style="border-color:var(--color-lab-primary);">
                     <h3 class="text-2xl font-semibold mb-3">Core Values</h3>
                     <p class="text-gray-600">Innovation, Integrity, Collaboration, and Open Science are the pillars of our daily work and progress.</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500">
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4" style="border-color:var(--color-lab-primary);">
                     <h3 class="text-2xl font-semibold mb-3">Join Us</h3>
                     <p class="text-gray-600">We are always looking for talented and passionate individuals to join our expanding team. Check the Team page for openings!</p>
                 </div>
             </div>
         </section>
 
-        <!-- ============================================== -->
-        <!-- RESEARCH PAGE -->
-        <!-- ============================================== -->
-        <section id="research-page" class="page hidden">
+        <!-- ============================================== --><!-- RESEARCH PAGE --><!-- ============================================== --><section id="research-page" class="page hidden">
             <h2 class="text-4xl font-extrabold text-gray-900 mb-6 border-b pb-2">Research Areas</h2>
             <div class="space-y-8">
-                <!-- RESEARCH PROJECT 1: 상세 내용 예시 추가 -->
-                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">Project A: Advanced AI Modeling</h3>
+                <!-- RESEARCH PROJECT 1: 상세 내용 예시 추가 --><div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <h3 class="text-2xl font-semibold mb-4" style="color:var(--color-lab-primary);">Project A: Advanced AI Modeling</h3>
                     <p class="text-gray-600 mb-4">Focusing on deep learning architectures for real-time data processing and predictive analytics. Current work involves reinforcement learning in complex simulation environments.</p>
                     
-                    <!-- 상세 목록 (Unordered List) 추가 예시 -->
-                    <ul class="list-disc list-inside space-y-1 text-gray-700 ml-4 border-l-2 pl-4 border-gray-100 mt-4">
+                    <!-- 상세 목록 (Unordered List) 추가 예시 --><ul class="list-disc list-inside space-y-1 text-gray-700 ml-4 border-l-2 pl-4 border-gray-100 mt-4">
                         <li>Development of novel spatio-temporal graph models.</li>
                         <li>Application in smart city traffic prediction systems.</li>
                         <li>Collaboration with industry partners on data privacy.</li>
                     </ul>
 
-                    <a href="#" class="mt-4 inline-block text-sm text-blue-500 hover:text-blue-700 font-medium transition duration-150">View Project Details &rarr;</a>
+                    <a href="#" class="mt-4 inline-block text-sm hover:text-[--color-lab-primary-dark] font-medium transition duration-150" style="color:var(--color-lab-primary);">View Project Details &rarr;</a>
                 </div>
-                <!-- RESEARCH PROJECT 2 -->
-                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <h3 class="text-2xl font-semibold text-blue-600 mb-2">Project B: Sustainable Energy Systems</h3>
+                <!-- RESEARCH PROJECT 2 --><div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <h3 class="text-2xl font-semibold mb-2" style="color:var(--color-lab-primary);">Project B: Sustainable Energy Systems</h3>
                     <p class="text-gray-600">Investigating new materials and designs for high-efficiency solar cells and energy storage solutions. This includes photochemical and electrochemical studies.</p>
                 </div>
-                <!-- RESEARCH PROJECT 3 -->
-                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <h3 class="text-2xl font-semibold text-blue-600 mb-2">Project C: Computational Biology</h3>
+                <!-- RESEARCH PROJECT 3 --><div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <h3 class="text-2xl font-semibold mb-2" style="color:var(--color-lab-primary);">Project C: Computational Biology</h3>
                     <p class="text-gray-600">Applying large-scale computing to analyze genomic data and protein folding mechanisms. We develop custom algorithms for biomarker discovery.</p>
                 </div>
             </div>
         </section>
 
-        <!-- ============================================== -->
-        <!-- TEAM PAGE -->
-        <!-- ============================================== -->
-        <section id="team-page" class="page hidden">
+        <!-- ============================================== --><!-- TEAM PAGE --><!-- ============================================== --><section id="team-page" class="page hidden">
             <h2 class="text-4xl font-extrabold text-gray-900 mb-6 border-b pb-2">Meet Our Team</h2>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- P.I. / Director -->
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center transform hover:scale-105 transition duration-300">
-                    <!-- 💡 PI 사진 URL을 여기에 넣어주세요. (현재는 ./images/team_pi.png) -->
-                    <img class="w-24 h-24 mx-auto rounded-full mb-4 object-cover border-4 border-blue-200" src="./images/team_pi.png" alt="PI Photo">
+                <!-- P.I. / Director --><div class="bg-white p-6 rounded-xl shadow-lg text-center transform hover:scale-105 transition duration-300">
+                    <!-- 💡 PI 사진 URL을 여기에 넣어주세요. (현재는 ./images/team_pi.png) --><img class="w-24 h-24 mx-auto rounded-full mb-4 object-cover border-4" style="border-color:var(--color-lab-primary-lighter);" src="./images/team_pi.png" alt="PI Photo">
                     <h3 class="text-xl font-bold text-gray-900">Dr. Jane Doe</h3>
-                    <p class="text-blue-600 font-medium">Principal Investigator</p>
+                    <p class="font-medium" style="color:var(--color-lab-primary);">Principal Investigator</p>
                     <p class="text-sm text-gray-500 mt-2">Email: jane.doe@lab.edu</p>
                 </div>
-                <!-- Post-doc -->
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center transform hover:scale-105 transition duration-300">
+                <!-- Post-doc --><div class="bg-white p-6 rounded-xl shadow-lg text-center transform hover:scale-105 transition duration-300">
                     <img class="w-24 h-24 mx-auto rounded-full mb-4 object-cover border-4 border-gray-200" src="https://placehold.co/100x100/475569/ffffff?text=PD" alt="Postdoc Photo">
                     <h3 class="text-xl font-bold text-gray-900">Dr. John Smith</h3>
                     <p class="text-gray-600">Postdoctoral Fellow</p>
                 </div>
-                <!-- Ph.D. Student -->
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center transform hover:scale-105 transition duration-300">
+                <!-- Ph.D. Student --><div class="bg-white p-6 rounded-xl shadow-lg text-center transform hover:scale-105 transition duration-300">
                     <img class="w-24 h-24 mx-auto rounded-full mb-4 object-cover border-4 border-gray-200" src="https://placehold.co/100x100/64748b/ffffff?text=PHD" alt="Student Photo">
                     <h3 class="text-xl font-bold text-gray-900">Alice Johnson</h3>
                     <p class="text-gray-600">Ph.D. Candidate</p>
                 </div>
-                <!-- Master's Student -->
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center transform hover:scale-105 transition duration-300">
+                <!-- Master's Student --><div class="bg-white p-6 rounded-xl shadow-lg text-center transform hover:scale-105 transition duration-300">
                     <img class="w-24 h-24 mx-auto rounded-full mb-4 object-cover border-4 border-gray-200" src="https://placehold.co/100x100/94a3b8/ffffff?text=MS" alt="Student Photo">
                     <h3 class="text-xl font-bold text-gray-900">Bob Williams</h3>
                     <p class="text-gray-600">Master's Student</p>
                 </div>
             </div>
 
-            <div class="mt-10 p-6 bg-blue-50 rounded-xl border border-blue-200">
-                <h3 class="text-2xl font-semibold text-blue-700 mb-3">Open Positions</h3>
-                <p class="text-blue-600">We are currently seeking one Postdoctoral Scholar and two Ph.D. students interested in Advanced AI Modeling. Please contact Dr. Doe for more details.</p>
-                <a href="mailto:jane.doe@lab.edu" class="inline-block mt-4 px-6 py-2 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition duration-150 shadow-md">
+            <div class="mt-10 p-6 rounded-xl border" style="background-color:var(--color-lab-primary-lighter); border-color:var(--color-lab-primary-light);">
+                <h3 class="text-2xl font-semibold mb-3" style="color:var(--color-lab-primary-dark);">Open Positions</h3>
+                <p class="text-gray-700">We are currently seeking one Postdoctoral Scholar and two Ph.D. students interested in Advanced AI Modeling. Please contact Dr. Doe for more details.</p>
+                <a href="mailto:jane.doe@lab.edu" class="inline-block mt-4 px-6 py-2 text-white font-semibold rounded-full shadow-md transition duration-150" style="background-color:var(--color-lab-primary); hover-background-color:var(--color-lab-primary-dark);">
                     Apply / Contact Us
                 </a>
             </div>
         </section>
 
-        <!-- ============================================== -->
-        <!-- PUBLICATIONS PAGE -->
-        <!-- ============================================== -->
-        <section id="publications-page" class="page hidden">
+        <!-- ============================================== --><!-- PUBLICATIONS PAGE --><!-- ============================================== --><section id="publications-page" class="page hidden">
             <h2 class="text-4xl font-extrabold text-gray-900 mb-6 border-b pb-2">Publications</h2>
             <div class="space-y-4">
-                <!-- PUBLICATIONS: 각 논문 항목의 구조를 확인하고 내용을 복사/붙여넣기하여 추가하세요 -->
-                <div class="bg-white p-4 rounded-xl shadow-md border-l-4 border-red-500">
-                    <p class="text-lg font-semibold text-blue-700">1. Real-time Predictive Modeling using Spatio-Temporal Graph Networks</p>
+                <!-- PUBLICATIONS: 각 논문 항목의 구조를 확인하고 내용을 복사/붙여넣기하여 추가하세요 --><div class="bg-white p-4 rounded-xl shadow-md border-l-4 border-red-500">
+                    <p class="text-lg font-semibold" style="color:var(--color-lab-primary-dark);">1. Real-time Predictive Modeling using Spatio-Temporal Graph Networks</p>
                     <p class="text-gray-600">J. Smith, A. Johnson, J. Doe. <span class="text-sm italic text-gray-500">Nature Communications, 2024.</span></p>
-                    <a href="#" class="text-sm text-blue-500 hover:text-blue-700"> [Abstract]</a> |
-                    <a href="#" class="text-sm text-blue-500 hover:text-blue-700"> [Full PDF]</a>
+                    <a href="#" class="text-sm hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary);"> [Abstract]</a> |
+                    <a href="#" class="text-sm hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary);"> [Full PDF]</a>
                 </div>
                 <div class="bg-white p-4 rounded-xl shadow-md border-l-4 border-red-500">
-                    <p class="text-lg font-semibold text-blue-700">2. Enhancing Solar Cell Efficiency through Nano-Structure Optimization</p>
+                    <p class="text-lg font-semibold" style="color:var(--color-lab-primary-dark);">2. Enhancing Solar Cell Efficiency through Nano-Structure Optimization</p>
                     <p class="text-gray-600">B. Williams, J. Doe. <span class="text-sm italic text-gray-500">Advanced Materials, 2023.</span></p>
-                    <a href="#" class="text-sm text-blue-500 hover:text-blue-700"> [Abstract]</a> |
-                    <a href="#" class="text-sm text-blue-500 hover:text-blue-700"> [Journal Link]</a>
+                    <a href="#" class="text-sm hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary);"> [Abstract]</a> |
+                    <a href="#" class="text-sm hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary);"> [Journal Link]</a>
                 </div>
                 <div class="bg-white p-4 rounded-xl shadow-md border-l-4 border-red-500">
-                    <p class="text-lg font-semibold text-blue-700">3. A Novel Framework for Large-Scale Genomic Data Analysis</p>
+                    <p class="text-lg font-semibold" style="color:var(--color-lab-primary-dark);">3. A Novel Framework for Large-Scale Genomic Data Analysis</p>
                     <p class="text-gray-600">A. Johnson, J. Smith. <span class="text-sm italic text-gray-500">Bioinformatics Journal, 2023.</span></p>
-                    <a href="#" class="text-sm text-blue-500 hover:text-blue-700"> [Abstract]</a>
+                    <a href="#" class="text-sm hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary);"> [Abstract]</a>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white mt-10">
+    <!-- Footer --><footer class="bg-gray-800 text-white mt-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-sm">
-            <p>&copy; 2024 Research Lab. All rights reserved. | Built with HTML & Tailwind CSS.</p>
+            <p>&copy; 2024 THEMMES group. All rights reserved. | Built with HTML & Tailwind CSS.</p>
         </div>
     </footer>
 
@@ -315,18 +292,22 @@
 
             // 3. 네비게이션 링크 활성화 상태 업데이트
             document.querySelectorAll('.nav-link').forEach(link => {
-                link.classList.remove('font-bold', 'text-blue-600', 'bg-gray-100');
-                link.classList.add('text-gray-600');
+                link.classList.remove('active-nav-link'); // 커스텀 클래스 제거
+                link.classList.add('text-gray-600'); // 기본 텍스트 색상 유지
 
                 // 로고/타이틀 (data-page="home")도 활성화 상태를 업데이트합니다.
                 if (link.getAttribute('data-page') === pageId) {
-                    link.classList.add('font-bold', 'text-blue-600', 'bg-gray-100');
-                    link.classList.remove('text-gray-600');
+                    link.classList.add('active-nav-link'); // 커스텀 클래스 추가
+                    link.classList.remove('text-gray-600'); // 기본 텍스트 색상 제거
                 }
             });
 
-            // URL의 해시를 업데이트하여 새로고침해도 페이지 상태 유지
-            window.location.hash = pageId;
+            // 4. URL 업데이트: 홈 화면(#home)은 주소에 남기지 않습니다.
+            if (pageId === 'home') {
+                history.replaceState(null, '', window.location.pathname + window.location.search);
+            } else {
+                window.location.hash = pageId;
+            }
 
             // 맨 위로 스크롤
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -372,7 +353,10 @@
         // ==============================================
         document.addEventListener('DOMContentLoaded', () => {
             // 1. 초기 페이지 로드
-            const initialPage = window.location.hash ? window.location.hash.substring(1) : 'home';
+            let initialPage = window.location.hash ? window.location.hash.substring(1) : 'home';
+            // 해시가 없는 경우에도 'home'으로 명확히 처리
+            if (!initialPage) initialPage = 'home'; 
+
             showPage(initialPage);
             
             // 2. 네비게이션 링크에 이벤트 리스너 추가 (로고 포함)
