@@ -48,18 +48,16 @@
     <!-- Header & Navigation -->
     <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
-            <!-- Logo/Lab Name -->
+            <!-- Logo/Lab Name (홈으로 이동하는 기능 유지) -->
             <div class="text-2xl font-bold text-gray-900">
-                <!-- onclick을 제거하고 data-page 속성을 사용하여 JS에서 이벤트를 처리합니다. -->
                 <a href="#home" class="hover:text-blue-600 transition duration-150 nav-link" data-page="home">
                     <span class="text-blue-600">RESEARCH</span> LAB
                 </a>
             </div>
 
-            <!-- Navigation Links -->
+            <!-- Navigation Links (Home 버튼 제거) -->
             <nav class="flex space-x-6">
-                <!-- onclick 대신 href="#pageId"와 data-page="pageId"를 사용합니다. -->
-                <a href="#home" class="nav-link text-gray-600 font-medium transition duration-150 rounded-md p-2 hover:bg-gray-100" data-page="home">Home</a>
+                <!-- <a href="#home" class="nav-link text-gray-600 font-medium transition duration-150 rounded-md p-2 hover:bg-gray-100" data-page="home">Home</a> <-- 이 부분을 제거했습니다. -->
                 <a href="#research" class="nav-link text-gray-600 font-medium transition duration-150 rounded-md p-2 hover:bg-gray-100" data-page="research">Research</a>
                 <a href="#team" class="nav-link text-gray-600 font-medium transition duration-150 rounded-md p-2 hover:bg-gray-100" data-page="team">Team</a>
                 <a href="#publications" class="nav-link text-gray-600 font-medium transition duration-150 rounded-md p-2 hover:bg-gray-100" data-page="publications">Publications</a>
@@ -320,6 +318,7 @@
                 link.classList.remove('font-bold', 'text-blue-600', 'bg-gray-100');
                 link.classList.add('text-gray-600');
 
+                // 로고/타이틀 (data-page="home")도 활성화 상태를 업데이트합니다.
                 if (link.getAttribute('data-page') === pageId) {
                     link.classList.add('font-bold', 'text-blue-600', 'bg-gray-100');
                     link.classList.remove('text-gray-600');
@@ -376,7 +375,7 @@
             const initialPage = window.location.hash ? window.location.hash.substring(1) : 'home';
             showPage(initialPage);
             
-            // 2. 네비게이션 링크에 이벤트 리스너 추가
+            // 2. 네비게이션 링크에 이벤트 리스너 추가 (로고 포함)
             document.querySelectorAll('.nav-link').forEach(link => {
                 link.addEventListener('click', (event) => {
                     event.preventDefault(); 
