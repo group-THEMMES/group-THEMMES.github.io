@@ -1,14 +1,240 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>페이지 제목을 여기에 작성</title>
-    </head>
-<body>
-    
-    <h1>환영합니다!</h1>
-    <p>이것은 제 GitHub Pages의 첫 페이지입니다.</p>
-    
-    </body>
+    <title>Research Lab Homepage</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for professional look */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa; /* Light gray background */
+        }
+        .nav-link:hover {
+            color: #1d4ed8; /* Blue-700 on hover */
+        }
+        .page-content {
+            min-height: calc(100vh - 128px); /* Full height minus header and footer */
+        }
+        /* Custom scrollbar for better feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #9ca3af;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+            <!-- Logo/Lab Name -->
+            <div class="text-2xl font-bold text-gray-900">
+                <a href="#" onclick="showPage('home')" class="hover:text-blue-600 transition duration-150">
+                    <span class="text-blue-600">RESEARCH</span> LAB
+                </a>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="flex space-x-6">
+                <a href="#" onclick="showPage('home')" class="nav-link text-gray-600 font-medium transition duration-150 rounded-md p-2 hover:bg-gray-100" data-page="home">Home</a>
+                <a href="#" onclick="showPage('research')" class="nav-link text-gray-600 font-medium transition duration-150 rounded-md p-2 hover:bg-gray-100" data-page="research">Research</a>
+                <a href="#" onclick="showPage('team')" class="nav-link text-gray-600 font-medium transition duration-150 rounded-md p-2 hover:bg-gray-100" data-page="team">Team</a>
+                <a href="#" onclick="showPage('publications')" class="nav-link text-gray-600 font-medium transition duration-150 rounded-md p-2 hover:bg-gray-100" data-page="publications">Publications</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 page-content">
+        
+        <!-- ============================================== -->
+        <!-- HOME PAGE -->
+        <!-- ============================================== -->
+        <section id="home-page" class="page active">
+            <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
+                <h2 class="text-4xl font-extrabold text-blue-600 mb-4">Welcome to Our Lab</h2>
+                <p class="text-lg text-gray-600">
+                    We are dedicated to exploring the frontiers of technology and science. Our mission is to innovate and solve real-world problems through rigorous research.
+                </p>
+            </div>
+
+            <!-- Lab Photo Placeholder -->
+            <div class="relative overflow-hidden rounded-xl shadow-2xl h-96 w-full bg-gray-200 flex items-center justify-center border-4 border-white">
+                <img 
+                    src="https://placehold.co/1200x400/1d4ed8/ffffff?text=Research+Lab+Photo" 
+                    alt="Lab Team Photo" 
+                    class="object-cover w-full h-full opacity-75"
+                    onerror="this.onerror=null; this.src='https://placehold.co/1200x400/1d4ed8/ffffff?text=Lab+Photo+Placeholder';"
+                >
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <span class="text-white text-3xl font-bold p-4 bg-black bg-opacity-30 rounded-lg">Lab Photo / Main Image</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500">
+                    <h3 class="text-2xl font-semibold mb-3">Our Vision</h3>
+                    <p class="text-gray-600">To be a leading research group recognized globally for our high-impact discoveries and collaborative environment.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500">
+                    <h3 class="text-2xl font-semibold mb-3">Core Values</h3>
+                    <p class="text-gray-600">Innovation, Integrity, Collaboration, and Open Science are the pillars of our daily work and progress.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500">
+                    <h3 class="text-2xl font-semibold mb-3">Join Us</h3>
+                    <p class="text-gray-600">We are always looking for talented and passionate individuals to join our expanding team. Check the Team page for openings!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- RESEARCH PAGE -->
+        <!-- ============================================== -->
+        <section id="research-page" class="page hidden">
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-6 border-b pb-2">Research Areas</h2>
+            <div class="space-y-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-2">Project A: Advanced AI Modeling</h3>
+                    <p class="text-gray-600">Focusing on deep learning architectures for real-time data processing and predictive analytics. Current work involves reinforcement learning in complex simulation environments.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-2">Project B: Sustainable Energy Systems</h3>
+                    <p class="text-gray-600">Investigating new materials and designs for high-efficiency solar cells and energy storage solutions. This includes photochemical and electrochemical studies.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-2">Project C: Computational Biology</h3>
+                    <p class="text-gray-600">Applying large-scale computing to analyze genomic data and protein folding mechanisms. We develop custom algorithms for biomarker discovery.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- TEAM PAGE -->
+        <!-- ============================================== -->
+        <section id="team-page" class="page hidden">
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-6 border-b pb-2">Meet Our Team</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- P.I. / Director -->
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <img class="w-24 h-24 mx-auto rounded-full mb-4 object-cover" src="https://placehold.co/100x100/1e293b/ffffff?text=PI" alt="PI Photo">
+                    <h3 class="text-xl font-bold text-gray-900">Dr. Jane Doe</h3>
+                    <p class="text-blue-600 font-medium">Principal Investigator</p>
+                    <p class="text-sm text-gray-500 mt-2">Email: jane.doe@lab.edu</p>
+                </div>
+                <!-- Post-doc -->
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <img class="w-24 h-24 mx-auto rounded-full mb-4 object-cover" src="https://placehold.co/100x100/475569/ffffff?text=PD" alt="Postdoc Photo">
+                    <h3 class="text-xl font-bold text-gray-900">Dr. John Smith</h3>
+                    <p class="text-gray-600">Postdoctoral Fellow</p>
+                </div>
+                <!-- Ph.D. Student -->
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <img class="w-24 h-24 mx-auto rounded-full mb-4 object-cover" src="https://placehold.co/100x100/64748b/ffffff?text=PHD" alt="Student Photo">
+                    <h3 class="text-xl font-bold text-gray-900">Alice Johnson</h3>
+                    <p class="text-gray-600">Ph.D. Candidate</p>
+                </div>
+                <!-- Master's Student -->
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <img class="w-24 h-24 mx-auto rounded-full mb-4 object-cover" src="https://placehold.co/100x100/94a3b8/ffffff?text=MS" alt="Student Photo">
+                    <h3 class="text-xl font-bold text-gray-900">Bob Williams</h3>
+                    <p class="text-gray-600">Master's Student</p>
+                </div>
+            </div>
+
+            <div class="mt-10 p-6 bg-blue-50 rounded-xl border border-blue-200">
+                <h3 class="text-2xl font-semibold text-blue-700 mb-3">Open Positions</h3>
+                <p class="text-blue-600">We are currently seeking one Postdoctoral Scholar and two Ph.D. students interested in Advanced AI Modeling. Please contact Dr. Doe for more details.</p>
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- PUBLICATIONS PAGE -->
+        <!-- ============================================== -->
+        <section id="publications-page" class="page hidden">
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-6 border-b pb-2">Publications</h2>
+            <div class="space-y-4">
+                <div class="bg-white p-4 rounded-xl shadow-md">
+                    <p class="text-lg font-semibold text-blue-700">1. Real-time Predictive Modeling using Spatio-Temporal Graph Networks</p>
+                    <p class="text-gray-600">J. Smith, A. Johnson, J. Doe. <span class="text-sm italic text-gray-500">Nature Communications, 2024.</span></p>
+                    <a href="#" class="text-sm text-blue-500 hover:text-blue-700"> [Abstract]</a> |
+                    <a href="#" class="text-sm text-blue-500 hover:text-blue-700"> [Full PDF]</a>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-md">
+                    <p class="text-lg font-semibold text-blue-700">2. Enhancing Solar Cell Efficiency through Nano-Structure Optimization</p>
+                    <p class="text-gray-600">B. Williams, J. Doe. <span class="text-sm italic text-gray-500">Advanced Materials, 2023.</span></p>
+                    <a href="#" class="text-sm text-blue-500 hover:text-blue-700"> [Abstract]</a> |
+                    <a href="#" class="text-sm text-blue-500 hover:text-blue-700"> [Journal Link]</a>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-md">
+                    <p class="text-lg font-semibold text-blue-700">3. A Novel Framework for Large-Scale Genomic Data Analysis</p>
+                    <p class="text-gray-600">A. Johnson, J. Smith. <span class="text-sm italic text-gray-500">Bioinformatics Journal, 2023.</span></p>
+                    <a href="#" class="text-sm text-blue-500 hover:text-blue-700"> [Abstract]</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-sm">
+            <p>&copy; 2024 Research Lab. All rights reserved. | Built with HTML & Tailwind CSS.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 페이지 전환 로직
+        function showPage(pageId) {
+            // 1. 모든 페이지 숨기기
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.add('hidden');
+            });
+            
+            // 2. 원하는 페이지 보이기
+            const targetPage = document.getElementById(pageId + '-page');
+            if (targetPage) {
+                targetPage.classList.remove('hidden');
+            }
+
+            // 3. 네비게이션 링크 활성화 상태 업데이트 (선택적)
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('font-bold', 'text-blue-600', 'bg-gray-100');
+                link.classList.add('text-gray-600');
+
+                if (link.getAttribute('data-page') === pageId) {
+                    link.classList.add('font-bold', 'text-blue-600', 'bg-gray-100');
+                    link.classList.remove('text-gray-600');
+                }
+            });
+
+            // URL의 해시를 업데이트하여 새로고침해도 페이지 상태 유지 (선택적)
+            window.location.hash = pageId;
+
+            // 맨 위로 스크롤
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // 초기 로드 시 페이지 설정
+        document.addEventListener('DOMContentLoaded', () => {
+            const initialPage = window.location.hash ? window.location.hash.substring(1) : 'home';
+            showPage(initialPage);
+        });
+
+        // 브라우저 뒤로 가기/앞으로 가기 버튼 처리
+        window.addEventListener('hashchange', () => {
+            const newPage = window.location.hash.substring(1) || 'home';
+            showPage(newPage);
+        });
+    </script>
+</body>
 </html>
