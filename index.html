@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 1. 페이지 타이틀 변경 -->
     <title>THEMMES group</title>
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/group-THEMMES/group-THEMMES.github.io/main/homeimage/favi.png">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Favicon 추가 --><link rel="icon" type="image/png" href="https://raw.githubusercontent.com/group-THEMMES/group-THEMMES.github.io/main/homeimage/favi.png">
+    <!-- Load Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Custom Tailwind Colors */
         :root {
@@ -64,15 +65,15 @@
 </head>
 <body class="text-gray-800">
 
-    <header class="bg-white shadow-md sticky top-0 z-50">
+    <!-- Header & Navigation --><header class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
-            <div class="text-2xl font-bold text-gray-900">
+            <!-- Logo/Lab Name --><div class="text-2xl font-bold text-gray-900">
                 <a id="home-logo-link" href="#home" class="hover:text-[--color-lab-primary-dark] transition duration-150 nav-link" data-page="home">
                     <span style="color:var(--color-lab-primary);">THEMMES</span> group
                 </a>
             </div>
 
-            <nav class="flex space-x-6">
+            <!-- Navigation Links --><nav class="flex space-x-6">
                 <a href="#research" class="nav-link text-gray-600 font-medium transition duration-150 rounded-md p-2 hover:bg-gray-100" data-page="research">Research</a>
                 <a href="#team" class="nav-link text-gray-600 font-medium transition duration-150 rounded-md p-2 hover:bg-gray-100" data-page="team">Team</a>
                 <a href="#publications" class="nav-link text-gray-600 font-medium transition duration-150 rounded-md p-2 hover:bg-gray-100" data-page="publications">Publications</a>
@@ -80,19 +81,21 @@
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 page-content">
+    <!-- Main Content Area --><main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 page-content">
         
-        <section id="home-page" class="page active">
+        <!-- ============================================== --><!-- HOME PAGE --><!-- ============================================== --><section id="home-page" class="page active">
             <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
+                <!-- Welcome 헤딩 변경 (색상 제거) -->
                 <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Welcome</h2>
+                <!-- 소개 내용 변경 -->
                 <p class="text-lg text-gray-600">
                     We are dedicated to exploring the frontiers of technology and science. Our mission is to innovate and solve real-world problems through theoretical approaches.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <!-- Lab Photo Carousels (두 개의 절반 너비 프레임) --><div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                 
-                <div class="relative overflow-hidden rounded-xl shadow-xl h-80 w-full bg-white flex items-center justify-center border-2 border-white">
+                <!-- 첫 번째 캐러셀 (Lab Photos) --><div class="relative overflow-hidden rounded-xl shadow-xl h-80 w-full bg-white flex items-center justify-center border-2 border-white">
                     <div id="lab-photos-carousel" class="w-full h-full relative">
                         <img 
                             src="./images/IMG_0184.jpg" 
@@ -139,7 +142,7 @@
                     </div>
                 </div>
 
-                <div class="relative overflow-hidden rounded-xl shadow-xl h-80 w-full bg-white flex items-center justify-center border-2 border-white">
+                <!-- 두 번째 캐러셀 (Outcomes Photos) --><div class="relative overflow-hidden rounded-xl shadow-xl h-80 w-full bg-white flex items-center justify-center border-2 border-white">
                     <div id="outcomes-carousel" class="w-full h-full relative">
                         <img 
                             src="./outcomes/xging.jpeg" 
@@ -162,7 +165,7 @@
                             data-index="2"
                             onerror="this.onerror=null; this.src='https://placehold.co/600x320/34d399/ffffff?text=OUTCOME+Catal';"
                         >
-                           <img 
+                         <img 
                             src="./outcomes/echem.jpeg" 
                             alt="Outcome Photo Echem" 
                             class="carousel-image absolute top-0 left-0 w-full h-full object-contain" 
@@ -185,22 +188,26 @@
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow-lg border-t-4" style="border-color:var(--color-lab-primary);">
                     <h3 class="text-2xl font-semibold mb-3">Join Us</h3>
+                    <!-- Join Us 내용 변경 -->
                     <p class="text-gray-600">We are always looking for talented and passionate candidates to join THEMMES group. Check the Team page for openings!</p>
                 </div>
             </div>
         </section>
 
-        <section id="research-page" class="page hidden">
+        <!-- ============================================== --><!-- RESEARCH PAGE --><!-- ============================================== --><section id="research-page" class="page hidden">
             
             <div id="main-research-view">
                 <h2 class="text-4xl font-extrabold text-gray-900 mb-6 border-b pb-2">Research Areas</h2>
                 
+                <!-- 소개글 변경 -->
                 <p class="text-lg text-gray-700 mb-10 p-4 rounded-xl border-l-4" style="border-color:var(--color-lab-primary); background-color:var(--color-lab-primary-lighter);">
                     THEMMES group has been investigating various (photo-)electrochemical systems. We have built up multiscale simulation skills based on a strong background on computational chemistry. In the era of automisation, the artificial intelligence is actively employed to accelerate our investigation. Furthermore, those theoretical findings are to be validated by experimental measurements. We thus actively collaborate with many experimental groups in the world.
                 </p>
 
+                <!-- TEAM Projects -->
                 <div class="space-y-8 mb-16" id="team-projects">
                     
+                    <!-- RESEARCH PROJECT 1: TEAM-reaX -->
                     <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-l-4" style="border-color:var(--color-lab-primary);">
                         <h3 class="text-2xl font-semibold mb-4" style="color:var(--color-lab-primary);">TEAM-reaX</h3>
                         <p class="text-gray-600 mb-4">Understanding reaction dynamics and kinetics over the (photo-)electrochemical system is our main goal.</p>
@@ -214,6 +221,7 @@
                         <a href="#" class="mt-4 inline-block text-sm hover:text-[--color-lab-primary-dark] font-medium transition duration-150" style="color:var(--color-lab-primary);" onclick="showProjectDetail('team-reax'); return false;">View Project Details &rarr;</a>
                     </div>
                     
+                    <!-- RESEARCH PROJECT 2: TEAM-Xtal -->
                     <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-l-4" style="border-color:var(--color-lab-primary);">
                         <h3 class="text-2xl font-semibold mb-4" style="color:var(--color-lab-primary);">TEAM-Xtal</h3>
                         <p class="text-gray-600 mb-4">Investigating materials for various (photo-)electrochemical systems focusing on realising the nature of disorderness.</p>
@@ -227,6 +235,7 @@
                         <a href="#" class="mt-4 inline-block text-sm hover:text-[--color-lab-primary-dark] font-medium transition duration-150" style="color:var(--color-lab-primary);" onclick="showProjectDetail('team-xtal'); return false;">View Project Details &rarr;</a>
                     </div>
                     
+                    <!-- RESEARCH PROJECT 3: TEAM-chXg -->
                     <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-l-4" style="border-color:var(--color-lab-primary);">
                         <h3 class="text-2xl font-semibold mb-4" style="color:var(--color-lab-primary);">TEAM-chXg</h3>
                         <p class="text-gray-600 mb-4">Understanding charging dynamics and atomic details of interphase.</p>
@@ -241,8 +250,10 @@
                     </div>
                 </div>
 
+                <!-- Methodology Section -->
                 <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b pb-2">Methodology</h2>
                 <div class="space-y-8">
+                    <!-- 1. Multiscale Simulation -->
                     <div class="bg-white p-6 rounded-xl shadow-lg border-l-4" style="border-color:var(--color-lab-primary);">
                         <h3 class="text-2xl font-semibold mb-3" style="color:var(--color-lab-primary-dark);">Multiscale Simulation</h3>
                         <p class="text-gray-700 leading-relaxed">
@@ -250,6 +261,7 @@
                         </p>
                     </div>
 
+                    <!-- 2. Artificial Intelligence -->
                     <div class="bg-white p-6 rounded-xl shadow-lg border-l-4" style="border-color:var(--color-lab-primary);">
                         <h3 class="text-2xl font-semibold mb-3" style="color:var(--color-lab-primary-dark);">Artificial Intelligence</h3>
                         <p class="text-gray-700 leading-relaxed">
@@ -257,6 +269,7 @@
                         </p>
                     </div>
 
+                    <!-- 3. Experimental Validation -->
                     <div class="bg-white p-6 rounded-xl shadow-lg border-l-4" style="border-color:var(--color-lab-primary);">
                         <h3 class="text-2xl font-semibold mb-3" style="color:var(--color-lab-primary-dark);">Experimental Validation</h3>
                         <p class="text-gray-700 leading-relaxed">
@@ -264,7 +277,10 @@
                         </p>
                     </div>
                 </div>
-            </div> <div id="project-detail-view" class="hidden bg-white p-8 rounded-xl shadow-xl">
+            </div> <!-- End of main-research-view -->
+
+            <!-- Project Detail View (Initially hidden) -->
+            <div id="project-detail-view" class="hidden bg-white p-8 rounded-xl shadow-xl">
                 <button id="back-to-research-btn" class="mb-6 flex items-center text-gray-600 hover:text-gray-800 transition duration-150" onclick="showMainResearchView()"> 
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
@@ -276,33 +292,34 @@
                 
                 <h4 class="text-2xl font-bold mb-3 mt-8">Core Focus Areas</h4>
                 <ul id="detail-list" class="list-disc list-inside space-y-2 text-gray-600 ml-4">
-                    </ul>
+                    <!-- Details will be populated here -->
+                </ul>
 
             </div>
 
         </section>
 
-        <section id="team-page" class="page hidden">
+        <!-- ============================================== --><!-- TEAM PAGE --><!-- ============================================== --><section id="team-page" class="page hidden">
             <h2 class="text-4xl font-extrabold text-gray-900 mb-6 border-b pb-2">Meet Our Team</h2>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center transform hover:scale-105 transition duration-300">
-                    <img class="w-24 h-24 mx-auto rounded-full mb-4 object-cover border-4" style="border-color:var(--color-lab-primary-lighter);" src="./images/team_pi.png" alt="PI Photo">
+                <!-- P.I. / Director --><div class="bg-white p-6 rounded-xl shadow-lg text-center transform hover:scale-105 transition duration-300">
+                    <!-- 💡 PI 사진 URL을 여기에 넣어주세요. (현재는 ./images/team_pi.png) --><img class="w-24 h-24 mx-auto rounded-full mb-4 object-cover border-4" style="border-color:var(--color-lab-primary-lighter);" src="./images/team_pi.png" alt="PI Photo">
                     <h3 class="text-xl font-bold text-gray-900">Dr. Jane Doe</h3>
                     <p class="font-medium" style="color:var(--color-lab-primary);">Principal Investigator</p>
                     <p class="text-sm text-gray-500 mt-2">Email: jane.doe@lab.edu</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center transform hover:scale-105 transition duration-300">
+                <!-- Post-doc --><div class="bg-white p-6 rounded-xl shadow-lg text-center transform hover:scale-105 transition duration-300">
                     <img class="w-24 h-24 mx-auto rounded-full mb-4 object-cover border-4 border-gray-200" src="https://placehold.co/100x100/475569/ffffff?text=PD" alt="Postdoc Photo">
                     <h3 class="text-xl font-bold text-gray-900">Dr. John Smith</h3>
                     <p class="text-gray-600">Postdoctoral Fellow</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center transform hover:scale-105 transition duration-300">
+                <!-- Ph.D. Student --><div class="bg-white p-6 rounded-xl shadow-lg text-center transform hover:scale-105 transition duration-300">
                     <img class="w-24 h-24 mx-auto rounded-full mb-4 object-cover border-4 border-gray-200" src="https://placehold.co/100x100/64748b/ffffff?text=PHD" alt="Student Photo">
                     <h3 class="text-xl font-bold text-gray-900">Alice Johnson</h3>
                     <p class="text-gray-600">Ph.D. Candidate</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center transform hover:scale-105 transition duration-300">
+                <!-- Master's Student --><div class="bg-white p-6 rounded-xl shadow-lg text-center transform hover:scale-105 transition duration-300">
                     <img class="w-24 h-24 mx-auto rounded-full mb-4 object-cover border-4 border-gray-200" src="https://placehold.co/100x100/94a3b8/ffffff?text=MS" alt="Student Photo">
                     <h3 class="text-xl font-bold text-gray-900">Bob Williams</h3>
                     <p class="text-gray-600">Master's Student</p>
@@ -318,231 +335,32 @@
             </div>
         </section>
 
-        <section id="publications-page" class="page hidden">
+        <!-- ============================================== --><!-- PUBLICATIONS PAGE --><!-- ============================================== --><section id="publications-page" class="page hidden">
             <h2 class="text-4xl font-extrabold text-gray-900 mb-6 border-b pb-2">Publications</h2>
             <div class="space-y-4">
-                <div class="bg-white p-4 rounded-xl shadow-md border-l-4" style="border-color:var(--color-lab-primary);">
-                    <p class="text-sm font-bold text-gray-500 mb-1">27. (2025)</p>
-                    <a href="https://doi.org/10.1021/jacs.4c17413" target="_blank" class="text-lg font-semibold block hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary-dark);">
-                        Space Charge, Modulating the Catalytic Activity of Single-Atom Metal Catalysts
-                    </a>
-                    <p class="text-gray-600">Choi, H.; Shin, S.-J.; Bae, G.; Cho, J.; Han, M. H.; Sougrati, M. T.; Jaouen, F.; Lee, K.-S.; Oh, H.-S.; Kim, H.; Choi, C. H. <span class="text-sm italic text-gray-500">J. Am. Chem. Soc.</span></p>
+                <!-- PUBLICATIONS: 각 논문 항목의 구조를 확인하고 내용을 복사/붙여넣기하여 추가하세요 --><div class="bg-white p-4 rounded-xl shadow-md border-l-4 border-red-500">
+                    <p class="text-lg font-semibold" style="color:var(--color-lab-primary-dark);">1. Real-time Predictive Modeling using Spatio-Temporal Graph Networks</p>
+                    <p class="text-gray-600">J. Smith, A. Johnson, J. Doe. <span class="text-sm italic text-gray-500">Nature Communications, 2024.</span></p>
+                    <a href="#" class="text-sm hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary);"> [Abstract]</a> |
+                    <a href="#" class="text-sm hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary);"> [Full PDF]</a>
                 </div>
-
-                <div class="bg-white p-4 rounded-xl shadow-md border-l-4" style="border-color:var(--color-lab-primary);">
-                    <p class="text-sm font-bold text-gray-500 mb-1">26. (2025)</p>
-                    <a href="https://doi.org/10.1021/jacsau.5c00176" target="_blank" class="text-lg font-semibold block hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary-dark);">
-                        DFT-CES2: Quantum Mechanics Based Embedding for Mean-Field QM/MM of Solid–Liquid Interfaces
-                    </a>
-                    <p class="text-gray-600">Jang, T.; Shin, S.-J.; Lim, H.-K.; Goddard, W. A. I.; Kim, H. <span class="text-sm italic text-gray-500">JACS Au.</span></p>
+                <div class="bg-white p-4 rounded-xl shadow-md border-l-4 border-red-500">
+                    <p class="text-lg font-semibold" style="color:var(--color-lab-primary-dark);">2. Enhancing Solar Cell Efficiency through Nano-Structure Optimization</p>
+                    <p class="text-gray-600">B. Williams, J. Doe. <span class="text-sm italic text-gray-500">Advanced Materials, 2023.</span></p>
+                    <a href="#" class="text-sm hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary);"> [Abstract]</a> |
+                    <a href="#" class="text-sm hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary);"> [Journal Link]</a>
                 </div>
-
-                <div class="bg-white p-4 rounded-xl shadow-md border-l-4" style="border-color:var(--color-lab-primary);">
-                    <p class="text-sm font-bold text-gray-500 mb-1">25. (2025)</p>
-                    <a href="https://doi.org/10.1021/jacs.4c17413" target="_blank" class="text-lg font-semibold block hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary-dark);">
-                        Cation Effect on the Electrochemical Platinum Dissolution
-                    </a>
-                    <p class="text-gray-600">Kim, H.; Kim, M. M.; Cho, J.; Lee, S.; Kim, D. H.; Shin, S.-J.; Utsunomiya, T.; Goddard, W. A. I.; Katayama, Y.; Kim, H.; Choi, C. H. <span class="text-sm italic text-gray-500">J. Am. Chem. Soc. 147, 5, 4667–4674.</span></p>
+                <div class="bg-white p-4 rounded-xl shadow-md border-l-4 border-red-500">
+                    <p class="text-lg font-semibold" style="color:var(--color-lab-primary-dark);">3. A Novel Framework for Large-Scale Genomic Data Analysis</p>
+                    <p class="text-gray-600">A. Johnson, J. Smith. <span class="text-sm italic text-gray-500">Bioinformatics Journal, 2023.</span></p>
+                    <a href="#" class="text-sm hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary);"> [Abstract]</a>
                 </div>
-
-                <div class="bg-white p-4 rounded-xl shadow-md border-l-4" style="border-color:var(--color-lab-primary);">
-                    <p class="text-sm font-bold text-gray-500 mb-1">24. (2025)</p>
-                    <a href="https://doi.org/10.1039/D4EE02677C" target="_blank" class="text-lg font-semibold block hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary-dark);">
-                        Self-Assembly-Assisted Dynamic Placement of Noble Metals Selectively on Multifunctional Carbide Supports for Alkaline Hydrogen Electrocatalysis.
-                    </a>
-                    <p class="text-gray-600">Kim, S.; Shin, S.-J.; Kim, H.; Kim, B.; Noh, N.; Lee, K.-S.; Park, J.; Jun, H.; Kim, J.; Byeon, J.; Lee, S.; Huang, H.; Noh, S.; Jeong, H. B.; Jang, J. H.; Yuk, J. M.; Kim, W.; Kim, H.; Lee, J. <span class="text-sm italic text-gray-500">Energy Environ. Sci. 18, 659-673.</span></p>
-                </div>
-
-                <div class="bg-white p-4 rounded-xl shadow-md border-l-4" style="border-color:var(--color-lab-primary);">
-                    <p class="text-sm font-bold text-gray-500 mb-1">23. (2024)</p>
-                    <a href="https://doi.org/10.1016/j.coelec.2024.101638" target="_blank" class="text-lg font-semibold block hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary-dark);">
-                        Electrochemical interface modelling for electrocatalytic materials design.
-                    </a>
-                    <p class="text-gray-600">Verga, L. G.; Shin, S.-J.; Walsh, A. <span class="text-sm italic text-gray-500">Curr. Opin. Electrochem. 101638.</span></p>
-                </div>
-
-                <div class="bg-white p-4 rounded-xl shadow-md border-l-4" style="border-color:var(--color-lab-primary);">
-                    <p class="text-sm font-bold text-gray-500 mb-1">22. (2024)</p>
-                    <a href="https://doi.org/10.1038/s44160-024-00465-3" target="_blank" class="text-lg font-semibold block hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary-dark);">
-                        Anomalous in-plane electrical anisotropy in elemental metal nanosheets.
-                    </a>
-                    <p class="text-gray-600">Kim, T.; Seo, D.; Kim, S.; Kim, G. W.; Shin, S.-J.; Kim, S. Y.; Lee, M.; Bae, J.; Ra, H.; Kim, M.; Kim, T.; Lee, S.; Kim, S.-R.; Cho, H.; Lee, H. J.; Choi, J.; Im, S.; Park, J.-W.; Cheon, J.; Lee, J. S.; Walsh, A.; Shim, W. <span class="text-sm italic text-gray-500">Nat. Synth. 1–12.</span></p>
-                </div>
-
-                <div class="bg-white p-4 rounded-xl shadow-md border-l-4" style="border-color:var(--color-lab-primary);">
-                    <p class="text-sm font-bold text-gray-500 mb-1">21. (2024)</p>
-                    <a href="https://doi.org/10.1002/smll.202306154" target="_blank" class="text-lg font-semibold block hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary-dark);">
-                        Hierarchically Superstructured Anisotropic Carbon Particles by Multiscale Assembly Driven by Spinodal Decomposition
-                    </a>
-                    <p class="text-gray-600">Ban, M.; Lee, J.; Kim, J.; Shin, S.-J.; Kim, T.; Jo, C.; Hwang, J.; Kim, S.; Lee, J. <span class="text-sm italic text-gray-500">Small 20 (13), 2306154.</span></p>
-                </div>
-
-                <div class="bg-white p-4 rounded-xl shadow-md border-l-4" style="border-color:var(--color-lab-primary);">
-                    <p class="text-sm font-bold text-gray-500 mb-1">20. (2024)</p>
-                    <a href="https://doi.org/10.1021/jacs.4c17413" target="_blank" class="text-lg font-semibold block hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary-dark);">
-                        Revealing Ion Adsorption and Charging Mechanisms in Layered Metal–Organic Framework Supercapacitors with Solid-State Nuclear Magnetic Resonance.
-                    </a>
-                    <p class="text-gray-600">Balhatchet, C. J.; Gittins, J. W.; Shin, S.-J.; Ge, K.; Liu, X.; Trisukhon, T.; Sharma, S.; Kress, T.; Taberna, P.-L.; Simon, P.; Walsh, A.; Forse, A. C. <span class="text-sm italic text-gray-500">J. Am. Chem. Soc. 146 (33), 23171–23181.</span></p>
-                </div>
-
-                <div class="bg-white p-4 rounded-xl shadow-md border-l-4" style="border-color:var(--color-lab-primary);">
-                    <p class="text-sm font-bold text-gray-500 mb-1">19. (2024)</p>
-                    <a href="https://doi.org/10.1039/D4EE01633F" target="_blank" class="text-lg font-semibold block hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary-dark);">
-                        Anti-Corrosive Electrolyte Design for Extending the Calendar Life of Lithium Metal Batteries.
-                    </a>
-                    <p class="text-gray-600">Kim, M.; An, J.; Shin, S.-J.; Hwang, I.; Lee, J.; Park, Y.; Kim, J.; Park, E.; Kim, J.; Park, G.; Kim, S.; Coskun, A.; Choi, J. W. <span class="text-sm italic text-gray-500">Energy Environ. Sci. 17 (16), 6079–6090.</span></p>
-                </div>
-
-                <div class="bg-white p-4 rounded-xl shadow-md border-l-4" style="border-color:var(--color-lab-primary);">
-                    <p class="text-sm font-bold text-gray-500 mb-1">18. (2023)</p>
-                    <a href="https://doi.org/10.1088/2516-1083/acfd8e" target="_blank" class="text-lg font-semibold block hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary-dark);">
-                        2023 Roadmap on Molecular Modelling of Electrochemical Energy Materials.
-                    </a>
-                    <p class="text-gray-600">Zhang, C.; Cheng, J.; Chen, Y.; Chan, M. K. Y.; Cai, Q.; Carvalho, R. P.; Marchiori, C. F. N.; Brandell, D.; Araujo, C. M.; Chen, M.; Ji, X.; Feng, G.; Goloviznina, K.; Serva, A.; Salanne, M.; Mandai, T.; Hosaka, T.; Alhanash, M.; Johansson, P.; Qiu, Y.-Z.; Xiao, H.; Eikerling, M.; Jinnouchi, R.; Melander, M. M.; Kastlunger, G.; Bouzid, A.; Pasquarello, A.; Shin, S.-J.; Kim, M. M.; Kim, H.; Schwarz, K.; Sundararaman, R. <span class="text-sm italic text-gray-500">J. Phys. Energy 5 (4), 041501.</span></p>
-                </div>
-
-                <div class="bg-white p-4 rounded-xl shadow-md border-l-4" style="border-color:var(--color-lab-primary);">
-                    <p class="text-sm font-bold text-gray-500 mb-1">17. (2023)</p>
-                    <a href="https://doi.org/10.1002/adfm.202308497" target="_blank" class="text-lg font-semibold block hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary-dark);">
-                        Metal–Organic Framework Supercapacitors: Challenges and Opportunities.
-                    </a>
-                    <p class="text-gray-600">Shin, S.; Gittins, J. W.; Balhatchet, C. J.; Walsh, A.; Forse, A. C. <span class="text-sm italic text-gray-500">Adv. Funct. Mater. 2308497.</span></p>
-                </div>
-
-                <div class="bg-white p-4 rounded-xl shadow-md border-l-4" style="border-color:var(--color-lab-primary);">
-                    <p class="text-sm font-bold text-gray-500 mb-1">16. (2023)</p>
-                    <a href="https://doi.org/10.1021/jacs.3c03164" target="_blank" class="text-lg font-semibold block hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary-dark);">
-                        Microscopic Origin of Electrochemical Capacitance in Metal–Organic Frameworks.
-                    </a>
-                    <p class="text-gray-600">Shin, S.-J.; Gittins, J. W.; Golomb, M. J.; Forse, A. C.; Walsh, A. <span class="text-sm italic text-gray-500">J. Am. Chem. Soc. 145 (26), 14529–14538.</span></p>
-                </div>
-
-                <div class="bg-white p-4 rounded-xl shadow-md border-l-4" style="border-color:var(--color-lab-primary);">
-                    <p class="text-sm font-bold text-gray-500 mb-1">15. (2023)</p>
-                    <a href="https://doi.org/10.1021/jacsau.3c00030" target="_blank" class="text-lg font-semibold block hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary-dark);">
-                        Anion-Induced Interfacial Liquid Layers on LiCoO 2 in Salt-in-Water Lithium-Ion Batteries.
-                    </a>
-                    <p class="text-gray-600">Oh, H.; Shin, S.-J.; Choi, E.; Yamagishi, H.; Ohta, T.; Yabuuchi, N.; Jung, H.-G.; Kim, H.; Byon, H. R. <span class="text-sm italic text-gray-500">JACS Au 3 (5), 1392–1402.</span></p>
-                </div>
-
-                <div class="bg-white p-4 rounded-xl shadow-md border-l-4" style="border-color:var(--color-lab-primary);">
-                    <p class="text-sm font-bold text-gray-500 mb-1">14. (2023)</p>
-                    <a href="https://doi.org/10.1039/D3MH00315F" target="_blank" class="text-lg font-semibold block hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary-dark);">
-                        Room-Temperature Stacking Disorder in Layered Covalent-Organic Frameworks from Machine-Learning Force Fields.
-                    </a>
-                    <p class="text-gray-600">Huang, J.; Shin, S.-J.; Tolborg, K.; Ganose, A. M.; Krenzer, G.; Walsh, A. <span class="text-sm italic text-gray-500">Mater. Horiz. 10, 2883–2891.</span></p>
-                </div>
-
-                <div class="bg-white p-4 rounded-xl shadow-md border-l-4" style="border-color:var(--color-lab-primary);">
-                    <p class="text-sm font-bold text-gray-500 mb-1">13. (2022)</p>
-                    <a href="https://doi.org/10.1002/anie.202211590" target="_blank" class="text-lg font-semibold block hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary-dark);">
-                        Cationic Additive with a Rigid Solvation Shell for High‐performance Zinc Ion Batteries.
-                    </a>
-                    <p class="text-gray-600">Kim, M.; Shin, S.; Lee, J.; Park, Y.; Kim, Y.; Kim, H.; Choi, J. W. <span class="text-sm italic text-gray-500">Angew. Chem. Int. Ed. 61 (47), e2022115.</span></p>
-                </div>
-
-                <div class="bg-white p-4 rounded-xl shadow-md border-l-4" style="border-color:var(--color-lab-primary);">
-                    <p class="text-sm font-bold text-gray-500 mb-1">12. (2022)</p>
-                    <a href="https://doi.org/10.1038/s41467-022-33230-0" target="_blank" class="text-lg font-semibold block hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary-dark);">
-                        A Unifying Mechanism for Cation Effect Modulating C1 and C2 Productions from CO2 Electroreduction.
-                    </a>
-                    <p class="text-gray-600">Shin, S.-J.; Choi, H.; Ringe, S.; Won, D. H.; Oh, H.-S.; Kim, D. H.; Lee, T.; Nam, D.-H.; Kim, H.; Choi, C. H. <span class="text-sm italic text-gray-500">Nat. Commun. 13 (1), 5482.</span></p>
-                </div>
-
-                <div class="bg-white p-4 rounded-xl shadow-md border-l-4" style="border-color:var(--color-lab-primary);">
-                    <p class="text-sm font-bold text-gray-500 mb-1">11. (2022)</p>
-                    <a href="https://doi.org/10.1002/bkcs.12458" target="_blank" class="text-lg font-semibold block hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary-dark);">
-                        Density Functional Theory in Classical Explicit Solvents: Mean‐field QM/MM Method for Simulating Solid–Liquid Interfaces.
-                    </a>
-                    <p class="text-gray-600">Jang, T.; Paik, D.; Shin, S.-J.; Kim, H. <span class="text-sm italic text-gray-500">Bull. Korean Chem. Soc. 43 (4), 476–483.</span></p>
-                </div>
-
-                <div class="bg-white p-4 rounded-xl shadow-md border-l-4" style="border-color:var(--color-lab-primary);">
-                    <p class="text-sm font-bold text-gray-500 mb-1">10. (2022)</p>
-                    <a href="https://doi.org/10.1038/s41467-021-27827-x" target="_blank" class="text-lg font-semibold block hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary-dark);">
-                        On the Importance of the Electric Double Layer Structure in Aqueous Electrocatalysis.
-                    </a>
-                    <p class="text-gray-600">Shin, S.-J.; Kim, D. H.; Bae, G.; Ringe, S.; Choi, H.; Lim, H.-K.; Choi, C. H.; Kim, H. <span class="text-sm italic text-gray-500">Nat. Commun. 13 (1), 174.</span></p>
-                </div>
-
-                <div class="bg-white p-4 rounded-xl shadow-md border-l-4" style="border-color:var(--color-lab-primary);">
-                    <p class="text-sm font-bold text-gray-500 mb-1">9. (2021)</p>
-                    <a href="https://doi.org/10.1002/anie.202102142" target="_blank" class="text-lg font-semibold block hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary-dark);">
-                        Tailoring a Dynamic Metal–Polymer Interaction to Improve Catalyst Selectivity and Longevity in Hydrogenation.
-                    </a>
-                    <p class="text-gray-600">Hyun, K.; Park, Y.; Lee, S.; Lee, J.; Choi, Y.; Shin, S.; Kim, H.; Choi, M. <span class="text-sm italic text-gray-500">Angew. Chem. Int. Ed. 60 (22), 12482–12489.</span></p>
-                </div>
-
-                <div class="bg-white p-4 rounded-xl shadow-md border-l-4" style="border-color:var(--color-lab-primary);">
-                    <p class="text-sm font-bold text-gray-500 mb-1">8. (2020)</p>
-                    <a href="https://doi.org/10.1016/j.apcatb.2020.119191" target="_blank" class="text-lg font-semibold block hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary-dark);">
-                        Monolayered g-C3N4 Nanosheet as an Emerging Cationic Building Block for Bifunctional 2D Superlattice Hybrid Catalysts with Controlled Defect Structures.
-                    </a>
-                    <p class="text-gray-600">Kwon, N. H.; Shin, S.-J.; Jin, X.; Jung, Y.; Hwang, G.-S.; Kim, H.; Hwang, S.-J. <span class="text-sm italic text-gray-500">Appl. Catal. B 277, 119191.</span></p>
-                </div>
-
-                <div class="bg-white p-4 rounded-xl shadow-md border-l-4" style="border-color:var(--color-lab-primary);">
-                    <p class="text-sm font-bold text-gray-500 mb-1">7. (2020)</p>
-                    <a href="https://doi.org/10.1126/sciadv.abb7369" target="_blank" class="text-lg font-semibold block hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary-dark);">
-                        Dynamic Metal-Polymer Interaction for the Design of Chemoselective and Long-Lived Hydrogenation Catalysts.
-                    </a>
-                    <p class="text-gray-600">Lee, S.; Shin, S.-J.; Baek, H.; Choi, Y.; Hyun, K.; Seo, M.; Kim, K.; Koh, D.-Y.; Kim, H.; Choi, M. <span class="text-sm italic text-gray-500">Sci. Adv. 6 (28), eabb7369.</span></p>
-                </div>
-
-                <div class="bg-white p-4 rounded-xl shadow-md border-l-4" style="border-color:var(--color-lab-primary);">
-                    <p class="text-sm font-bold text-gray-500 mb-1">6. (2020)</p>
-                    <a href="https://doi.org/10.1002/smll.201903265" target="_blank" class="text-lg font-semibold block hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary-dark);">
-                        Synergistic Control of Structural Disorder and Surface Bonding Nature to Optimize the Functionality of Manganese Oxide as an Electrocatalyst and a Cathode for Li–O2 Batteries.
-                    </a>
-                    <p class="text-gray-600">Jin, X.; Park, M.; Shin, S.; Jo, Y.; Kim, M. G.; Kim, H.; Kang, Y.; Hwang, S. <span class="text-sm italic text-gray-500">Small 16 (12), 1903265.</span></p>
-                </div>
-
-                <div class="bg-white p-4 rounded-xl shadow-md border-l-4" style="border-color:var(--color-lab-primary);">
-                    <p class="text-sm font-bold text-gray-500 mb-1">5. (2020)</p>
-                    <a href="https://doi.org/10.1039/D0EE00588G" target="_blank" class="text-lg font-semibold block hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary-dark);">
-                        Time-Resolved Observation of C–C Coupling Intermediates on Cu Electrodes for Selective Electrochemical CO2 Reduction.
-                    </a>
-                    <p class="text-gray-600">Kim, Y.; Park, S.; Shin, S.-J.; Choi, W.; Min, B. K.; Kim, H.; Kim, W.; Hwang, Y. J. <span class="text-sm italic text-gray-500">Energy Environ. Sci. 13 (11), 4301–4311.</span></p>
-                </div>
-
-                <div class="bg-white p-4 rounded-xl shadow-md border-l-4" style="border-color:var(--color-lab-primary);">
-                    <p class="text-sm font-bold text-gray-500 mb-1">4. (2019)</p>
-                    <a href="https://doi.org/10.1021/acsenergylett.9b01550" target="_blank" class="text-lg font-semibold block hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary-dark);">
-                        Metal–Oxide Interfaces for Selective Electrochemical C–C Coupling Reactions.
-                    </a>
-                    <p class="text-gray-600">Lee, C. W.; Shin, S.-J.; Jung, H.; Nguyen, D. L. T.; Lee, S. Y.; Lee, W. H.; Won, D. H.; Kim, M. G.; Oh, H.-S.; Jang, T.; Kim, H.; Min, B. K.; Hwang, Y. J. <span class="text-sm italic text-gray-500">ACS Energy Lett. 4, 2241–2248.</span></p>
-                </div>
-
-                <div class="bg-white p-4 rounded-xl shadow-md border-l-4" style="border-color:var(--color-lab-primary);">
-                    <p class="text-sm font-bold text-gray-500 mb-1">3. (2018)</p>
-                    <a href="https://doi.org/10.1002/anie.201809796" target="_blank" class="text-lg font-semibold block hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary-dark);">
-                        α-MnO2 Nanowire-Anchored Highly Oxidized Cluster as a Catalyst for Li-O2 Batteries: Superior Electrocatalytic Activity and High Functionality.
-                    </a>
-                    <p class="text-gray-600">Gu, T.-H.; Agyeman, D. A.; Shin, S.-J.; Jin, X.; Lee, J. M.; Kim, H.; Kang, Y.-M.; Hwang, S.-J. <span class="text-sm italic text-gray-500">Angew. Chem. Int. Ed. 57 (49), 15984–15989.</span></p>
-                </div>
-
-                <div class="bg-white p-4 rounded-xl shadow-md border-l-4" style="border-color:var(--color-lab-primary);">
-                    <p class="text-sm font-bold text-gray-500 mb-1">2. (2018)</p>
-                    <a href="https://doi.org/10.1016/j.nanoen.2018.09.006" target="_blank" class="text-lg font-semibold block hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary-dark);">
-                        Superior Role of MXene Nanosheet as Hybridization Matrix over Graphene in Enhancing Interfacial Electronic Coupling and Functionalities of Metal Oxide.
-                    </a>
-                    <p class="text-gray-600">Jin, X.; Shin, S.-J.; Kim, N.; Kang, B.; Piao, H.; Choy, J.-H.; Kim, H.; Hwang, S.-J. <span class="text-sm italic text-gray-500">Nano Energy 53, 841–848.</span></p>
-                </div>
-
-                <div class="bg-white p-4 rounded-xl shadow-md border-l-4" style="border-color:var(--color-lab-primary);">
-                    <p class="text-sm font-bold text-gray-500 mb-1">1. (2018)</p>
-                    <a href="https://doi.org/10.1039/C8TA04403A" target="_blank" class="text-lg font-semibold block hover:text-[--color-lab-primary-dark]" style="color:var(--color-lab-primary-dark);">
-                        Heterolayered 2D Nanohybrids of Uniformly Stacked Transition Metal Dichalcogenide–Transition Metal Oxide Monolayers with Improved Energy-Related Functionalities.
-                    </a>
-                    <p class="text-gray-600">Jin, X.; Shin, S.-J.; Kim, J.; Lee, N.-S.; Kim, H.; Hwang, S.-J. <span class="text-sm italic text-gray-500">J. Mater. Chem. A 6 (31), 15237–15244.</span></p>
-                </div>
-
             </div>
         </section>
 
     </main>
 
-    <footer class="bg-gray-800 text-white mt-10">
+    <!-- Footer --><footer class="bg-gray-800 text-white mt-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-sm">
             <p>&copy; 2024 THEMMES group. All rights reserved. | Built with HTML & Tailwind CSS.</p>
         </div>
@@ -607,4 +425,120 @@
 
             // 4. URL 업데이트: 홈 화면(#home)은 주소에 남기지 않습니다.
             if (pageId === 'home') {
-                history.replaceState(null, '', window.location.pathname + window.
+                history.replaceState(null, '', window.location.pathname + window.location.search);
+            } else {
+                window.location.hash = pageId;
+            }
+
+            // 맨 위로 스크롤
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // 5. research 페이지로 돌아올 때 메인 뷰를 보여줌 (상세 페이지에서 돌아왔을 경우 대비)
+            if (pageId === 'research') {
+                showMainResearchView();
+            }
+        }
+        
+        // 프로젝트 상세 보기 로직
+        function showProjectDetail(projectId) {
+            const mainView = document.getElementById('main-research-view');
+            const detailView = document.getElementById('project-detail-view');
+            const detailData = projectDetails[projectId];
+
+            if (detailData) {
+                // 상세 내용 업데이트
+                document.getElementById('detail-title').textContent = detailData.title;
+                document.getElementById('detail-content').textContent = detailData.summary;
+                
+                const detailList = document.getElementById('detail-list');
+                detailList.innerHTML = ''; // 기존 목록 초기화
+                detailData.details.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    detailList.appendChild(li);
+                });
+
+                // 뷰 전환
+                mainView.classList.add('hidden');
+                detailView.classList.remove('hidden');
+                
+                // 스크롤을 맨 위로 이동
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        // 메인 연구 목록 뷰 로직
+        function showMainResearchView() {
+            document.getElementById('main-research-view').classList.remove('hidden');
+            document.getElementById('project-detail-view').classList.add('hidden');
+        }
+
+
+        // ==============================================
+        // 캐러셀 (슬라이드 쇼) 로직 - 재사용 가능한 함수로 리팩토링
+        // ==============================================
+        function initializeCarousel(containerId) {
+            const carouselContainer = document.getElementById(containerId);
+            if (!carouselContainer) return;
+
+            const carouselImages = carouselContainer.querySelectorAll('.carousel-image');
+            let currentImageIndex = 0;
+
+            if (carouselImages.length === 0) return;
+
+            // DOM 로드 후 첫 번째 이미지를 보이도록 active 클래스 추가
+            carouselImages[0].classList.add('active-image');
+
+            // 이 캐러셀 인스턴스에 고유한 다음 이미지 표시 함수
+            function showNextImage() {
+                if (carouselImages.length < 2) return;
+
+                // 현재 보이는 이미지에서 active 클래스 제거 (투명도 0으로 전환)
+                carouselImages[currentImageIndex].classList.remove('active-image');
+
+                // 다음 인덱스 계산 (순환)
+                currentImageIndex = (currentImageIndex + 1) % carouselImages.length;
+
+                // 다음 이미지에 active 클래스 추가 (투명도 100으로 전환)
+                carouselImages[currentImageIndex].classList.add('active-image');
+            }
+
+            // 5초(5000ms)마다 showNextImage 함수 실행
+            if (carouselImages.length > 1) {
+                setInterval(showNextImage, 5000); 
+            }
+        }
+        
+        // ==============================================
+        // 초기 로드 시 페이지 및 캐러셀 설정 & 이벤트 리스너 추가
+        // ==============================================
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. 초기 페이지 로드
+            let initialPage = window.location.hash ? window.location.hash.substring(1) : 'home';
+            // 해시가 없는 경우에도 'home'으로 명확히 처리
+            if (!initialPage) initialPage = 'home'; 
+
+            showPage(initialPage);
+            
+            // 2. 네비게이션 링크에 이벤트 리스너 추가 (로고 포함)
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault(); 
+                    const pageId = link.getAttribute('data-page');
+                    showPage(pageId);
+                });
+            });
+
+            // 3. 두 개의 캐러셀 시작
+            initializeCarousel('lab-photos-carousel');
+            initializeCarousel('outcomes-carousel');
+        });
+
+        // 브라우저 뒤로 가기/앞으로 가기 버튼 처리 (URL 해시 변경 감지)
+        window.addEventListener('hashchange', () => {
+            const newPage = window.location.hash.substring(1) || 'home';
+            showPage(newPage);
+        });
+    </script>
+</body>
+</html>
