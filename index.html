@@ -81,60 +81,95 @@
                 </p>
             </div>
 
-            <!-- Lab Photo Carousel (슬라이드) -->
-            <!-- 크기 조정: h-96 -> h-80, 그림자 조정: shadow-2xl -> shadow-xl, 테두리 조정: border-4 -> border-2 -->
-            <div class="relative overflow-hidden rounded-xl shadow-xl h-80 w-full bg-white flex items-center justify-center border-2 border-white">
-                <div id="image-carousel" class="w-full h-full relative">
-                    <!-- 💡 GitHub Pages의 'images' 폴더 내 실제 파일명으로 업데이트되었습니다. -->
-                    
-                    <img 
-                        src="./images/IMG_0184.jpg" 
-                        alt="Lab Photo 1" 
-                        class="carousel-image absolute top-0 left-0 w-full h-full object-contain" 
-                        data-index="0"
-                        onerror="this.onerror=null; this.src='https://placehold.co/1200x400/1d4ed8/ffffff?text=Image+Load+Error';"
-                    >
-                    <img 
-                        src="./images/IMG_0772.jpg" 
-                        alt="Lab Photo 2" 
-                        class="carousel-image absolute top-0 left-0 w-full h-full object-contain" 
-                        data-index="1"
-                        onerror="this.onerror=null; this.src='https://placehold.co/1200x400/3b82f6/ffffff?text=Image+Load+Error';"
-                    >
-                    <img 
-                        src="./images/IMG_5494.jpg" 
-                        alt="Lab Photo 3" 
-                        class="carousel-image absolute top-0 left-0 w-full h-full object-contain" 
-                        data-index="2"
-                        onerror="this.onerror=null; this.src='https://placehold.co/1200x400/93c5fd/ffffff?text=Image+Load+Error';"
-                    >
-                    <img 
-                        src="./images/IMG_5864.jpg" 
-                        alt="Lab Photo 4" 
-                        class="carousel-image absolute top-0 left-0 w-full h-full object-contain" 
-                        data-index="3"
-                        onerror="this.onerror=null; this.src='https://placehold.co/1200x400/93c5fd/ffffff?text=Image+Load+Error';"
-                    >
-                    <img 
-                        src="./images/IMG_6213.jpg" 
-                        alt="Lab Photo 5" 
-                        class="carousel-image absolute top-0 left-0 w-full h-full object-contain" 
-                        data-index="4"
-                        onerror="this.onerror=null; this.src='https://placehold.co/1200x400/93c5fd/ffffff?text=Image+Load+Error';"
-                    >
-                    <img 
-                        src="./images/IMG_7627.jpg" 
-                        alt="Lab Photo 6" 
-                        class="carousel-image absolute top-0 left-0 w-full h-full object-contain" 
-                        data-index="5"
-                        onerror="this.onerror=null; this.src='https://placehold.co/1200x400/93c5fd/ffffff?text=Image+Load+Error';"
-                    >
+            <!-- Lab Photo Carousels (두 개의 절반 너비 프레임) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                
+                <!-- 첫 번째 캐러셀 (Lab Photos) -->
+                <div class="relative overflow-hidden rounded-xl shadow-xl h-80 w-full bg-white flex items-center justify-center border-2 border-white">
+                    <div id="lab-photos-carousel" class="w-full h-full relative">
+                        <img 
+                            src="./images/IMG_0184.jpg" 
+                            alt="Lab Photo 1" 
+                            class="carousel-image absolute top-0 left-0 w-full h-full object-contain" 
+                            data-index="0"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x320/1d4ed8/ffffff?text=LAB+Photo+1';"
+                        >
+                        <img 
+                            src="./images/IMG_0772.jpg" 
+                            alt="Lab Photo 2" 
+                            class="carousel-image absolute top-0 left-0 w-full h-full object-contain" 
+                            data-index="1"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x320/3b82f6/ffffff?text=LAB+Photo+2';"
+                        >
+                        <img 
+                            src="./images/IMG_5494.jpg" 
+                            alt="Lab Photo 3" 
+                            class="carousel-image absolute top-0 left-0 w-full h-full object-contain" 
+                            data-index="2"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x320/93c5fd/ffffff?text=LAB+Photo+3';"
+                        >
+                        <img 
+                            src="./images/IMG_5864.jpg" 
+                            alt="Lab Photo 4" 
+                            class="carousel-image absolute top-0 left-0 w-full h-full object-contain" 
+                            data-index="3"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x320/93c5fd/ffffff?text=LAB+Photo+4';"
+                        >
+                        <img 
+                            src="./images/IMG_6213.jpg" 
+                            alt="Lab Photo 5" 
+                            class="carousel-image absolute top-0 left-0 w-full h-full object-contain" 
+                            data-index="4"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x320/93c5fd/ffffff?text=LAB+Photo+5';"
+                        >
+                        <img 
+                            src="./images/IMG_7627.jpg" 
+                            alt="Lab Photo 6" 
+                            class="carousel-image absolute top-0 left-0 w-full h-full object-contain" 
+                            data-index="5"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x320/93c5fd/ffffff?text=LAB+Photo+6';"
+                        >
+                    </div>
                 </div>
 
-                <!-- 캐러셀 위에 표시되던 텍스트 오버레이 제거됨 -->
-                <!-- <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <span class="text-white text-3xl font-bold p-4 bg-black bg-opacity-30 rounded-lg">Research Lab Highlights</span>
-                </div> -->
+                <!-- 두 번째 캐러셀 (Outcomes Photos) - './outcomes/' 경로 사용 및 파일명 업데이트 -->
+                <div class="relative overflow-hidden rounded-xl shadow-xl h-80 w-full bg-white flex items-center justify-center border-2 border-white">
+                    <div id="outcomes-carousel" class="w-full h-full relative">
+                        <!-- 파일명 업데이트: xging.jpeg -->
+                        <img 
+                            src="./outcomes/xging.jpeg" 
+                            alt="Outcome Photo X-Ging" 
+                            class="carousel-image absolute top-0 left-0 w-full h-full object-contain" 
+                            data-index="0"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x320/059669/ffffff?text=OUTCOME+X-Ging';"
+                        >
+                        <!-- 파일명 업데이트: xtal.jpeg -->
+                        <img 
+                            src="./outcomes/xtal.jpeg" 
+                            alt="Outcome Photo Xtal" 
+                            class="carousel-image absolute top-0 left-0 w-full h-full object-contain" 
+                            data-index="1"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x320/10b981/ffffff?text=OUTCOME+Xtal';"
+                        >
+                        <!-- 파일명 업데이트: catal.jpeg -->
+                        <img 
+                            src="./outcomes/catal.jpeg" 
+                            alt="Outcome Photo Catalysis" 
+                            class="carousel-image absolute top-0 left-0 w-full h-full object-contain" 
+                            data-index="2"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x320/34d399/ffffff?text=OUTCOME+Catal';"
+                        >
+                         <!-- 파일명 추가: echem.jpeg -->
+                         <img 
+                            src="./outcomes/echem.jpeg" 
+                            alt="Outcome Photo Echem" 
+                            class="carousel-image absolute top-0 left-0 w-full h-full object-contain" 
+                            data-index="3"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x320/6ee7b7/ffffff?text=OUTCOME+Echem';"
+                        >
+                    </div>
+                </div>
+
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
@@ -299,36 +334,37 @@
         }
 
         // ==============================================
-        // 캐러셀 (슬라이드 쇼) 로직
+        // 캐러셀 (슬라이드 쇼) 로직 - 재사용 가능한 함수로 리팩토링
         // ==============================================
-        let currentImageIndex = 0;
-        let carouselImages = [];
+        function initializeCarousel(containerId) {
+            const carouselContainer = document.getElementById(containerId);
+            if (!carouselContainer) return;
 
-        function showNextImage() {
-            if (carouselImages.length < 2) return; // 이미지가 2개 미만이면 실행 중단
+            const carouselImages = carouselContainer.querySelectorAll('.carousel-image');
+            let currentImageIndex = 0;
 
-            // 1. 현재 보이는 이미지에서 active 클래스 제거 (투명도 0으로 전환)
-            carouselImages[currentImageIndex].classList.remove('active-image');
+            if (carouselImages.length === 0) return;
 
-            // 2. 다음 인덱스 계산 (순환)
-            currentImageIndex = (currentImageIndex + 1) % carouselImages.length;
+            // DOM 로드 후 첫 번째 이미지를 보이도록 active 클래스 추가
+            carouselImages[0].classList.add('active-image');
 
-            // 3. 다음 이미지에 active 클래스 추가 (투명도 100으로 전환)
-            carouselImages[currentImageIndex].classList.add('active-image');
-        }
+            // 이 캐러셀 인스턴스에 고유한 다음 이미지 표시 함수
+            function showNextImage() {
+                if (carouselImages.length < 2) return;
 
-        function startCarousel() {
-            // 모든 'carousel-image' 클래스를 가진 요소를 가져옴
-            carouselImages = document.querySelectorAll('.carousel-image');
-            
-            if (carouselImages.length > 0) {
-                // DOM 로드 후 첫 번째 이미지를 보이도록 active 클래스 추가 (JS에서 명시적으로 제어)
-                carouselImages[0].classList.add('active-image');
+                // 현재 보이는 이미지에서 active 클래스 제거 (투명도 0으로 전환)
+                carouselImages[currentImageIndex].classList.remove('active-image');
 
-                if (carouselImages.length > 1) {
-                    // 5초(5000ms)마다 showNextImage 함수 실행
-                    setInterval(showNextImage, 5000); 
-                }
+                // 다음 인덱스 계산 (순환)
+                currentImageIndex = (currentImageIndex + 1) % carouselImages.length;
+
+                // 다음 이미지에 active 클래스 추가 (투명도 100으로 전환)
+                carouselImages[currentImageIndex].classList.add('active-image');
+            }
+
+            // 5초(5000ms)마다 showNextImage 함수 실행
+            if (carouselImages.length > 1) {
+                setInterval(showNextImage, 5000); 
             }
         }
         
@@ -340,18 +376,18 @@
             const initialPage = window.location.hash ? window.location.hash.substring(1) : 'home';
             showPage(initialPage);
             
-            // 2. 네비게이션 링크에 이벤트 리스너 추가 (페이지 전환 수정)
+            // 2. 네비게이션 링크에 이벤트 리스너 추가
             document.querySelectorAll('.nav-link').forEach(link => {
                 link.addEventListener('click', (event) => {
-                    // 기본 동작 (페이지 맨 위로 이동) 방지 - 이것이 핵심 해결책입니다.
                     event.preventDefault(); 
                     const pageId = link.getAttribute('data-page');
                     showPage(pageId);
                 });
             });
 
-            // 3. 캐러셀 시작
-            startCarousel(); 
+            // 3. 두 개의 캐러셀 시작
+            initializeCarousel('lab-photos-carousel');
+            initializeCarousel('outcomes-carousel');
         });
 
         // 브라우저 뒤로 가기/앞으로 가기 버튼 처리 (URL 해시 변경 감지)
