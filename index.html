@@ -50,17 +50,19 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
             <!-- Logo/Lab Name -->
             <div class="text-2xl font-bold text-gray-900">
-                <a href="#" onclick="showPage('home')" class="hover:text-blue-600 transition duration-150">
+                <!-- onclick을 제거하고 data-page 속성을 사용하여 JS에서 이벤트를 처리합니다. -->
+                <a href="#home" class="hover:text-blue-600 transition duration-150 nav-link" data-page="home">
                     <span class="text-blue-600">RESEARCH</span> LAB
                 </a>
             </div>
 
             <!-- Navigation Links -->
             <nav class="flex space-x-6">
-                <a href="#" onclick="showPage('home')" class="nav-link text-gray-600 font-medium transition duration-150 rounded-md p-2 hover:bg-gray-100" data-page="home">Home</a>
-                <a href="#" onclick="showPage('research')" class="nav-link text-gray-600 font-medium transition duration-150 rounded-md p-2 hover:bg-gray-100" data-page="research">Research</a>
-                <a href="#" onclick="showPage('team')" class="nav-link text-gray-600 font-medium transition duration-150 rounded-md p-2 hover:bg-gray-100" data-page="team">Team</a>
-                <a href="#" onclick="showPage('publications')" class="nav-link text-gray-600 font-medium transition duration-150 rounded-md p-2 hover:bg-gray-100" data-page="publications">Publications</a>
+                <!-- onclick 대신 href="#pageId"와 data-page="pageId"를 사용합니다. -->
+                <a href="#home" class="nav-link text-gray-600 font-medium transition duration-150 rounded-md p-2 hover:bg-gray-100" data-page="home">Home</a>
+                <a href="#research" class="nav-link text-gray-600 font-medium transition duration-150 rounded-md p-2 hover:bg-gray-100" data-page="research">Research</a>
+                <a href="#team" class="nav-link text-gray-600 font-medium transition duration-150 rounded-md p-2 hover:bg-gray-100" data-page="team">Team</a>
+                <a href="#publications" class="nav-link text-gray-600 font-medium transition duration-150 rounded-md p-2 hover:bg-gray-100" data-page="publications">Publications</a>
             </nav>
         </div>
     </header>
@@ -80,49 +82,50 @@
             </div>
 
             <!-- Lab Photo Carousel (슬라이드) -->
-            <div class="relative overflow-hidden rounded-xl shadow-2xl h-96 w-full bg-gray-200 flex items-center justify-center border-4 border-white">
+            <!-- 배경색을 bg-white로 변경하여 object-contain 사용 시 잘린 부분의 배경이 흰색으로 보이게 합니다. -->
+            <div class="relative overflow-hidden rounded-xl shadow-2xl h-96 w-full bg-white flex items-center justify-center border-4 border-white">
                 <div id="image-carousel" class="w-full h-full relative">
                     <!-- 💡 GitHub Pages의 'images' 폴더 내 실제 파일명으로 업데이트되었습니다. -->
                     
                     <img 
                         src="./images/IMG_0184.jpg" 
                         alt="Lab Photo 1" 
-                        class="carousel-image absolute top-0 left-0 w-full h-full object-cover" 
+                        class="carousel-image absolute top-0 left-0 w-full h-full object-contain" 
                         data-index="0"
                         onerror="this.onerror=null; this.src='https://placehold.co/1200x400/1d4ed8/ffffff?text=Image+Load+Error';"
                     >
                     <img 
                         src="./images/IMG_0772.jpg" 
                         alt="Lab Photo 2" 
-                        class="carousel-image absolute top-0 left-0 w-full h-full object-cover" 
+                        class="carousel-image absolute top-0 left-0 w-full h-full object-contain" 
                         data-index="1"
                         onerror="this.onerror=null; this.src='https://placehold.co/1200x400/3b82f6/ffffff?text=Image+Load+Error';"
                     >
                     <img 
                         src="./images/IMG_5494.jpg" 
                         alt="Lab Photo 3" 
-                        class="carousel-image absolute top-0 left-0 w-full h-full object-cover" 
+                        class="carousel-image absolute top-0 left-0 w-full h-full object-contain" 
                         data-index="2"
                         onerror="this.onerror=null; this.src='https://placehold.co/1200x400/93c5fd/ffffff?text=Image+Load+Error';"
                     >
                     <img 
                         src="./images/IMG_5864.jpg" 
                         alt="Lab Photo 4" 
-                        class="carousel-image absolute top-0 left-0 w-full h-full object-cover" 
+                        class="carousel-image absolute top-0 left-0 w-full h-full object-contain" 
                         data-index="3"
                         onerror="this.onerror=null; this.src='https://placehold.co/1200x400/93c5fd/ffffff?text=Image+Load+Error';"
                     >
                     <img 
                         src="./images/IMG_6213.jpg" 
                         alt="Lab Photo 5" 
-                        class="carousel-image absolute top-0 left-0 w-full h-full object-cover" 
+                        class="carousel-image absolute top-0 left-0 w-full h-full object-contain" 
                         data-index="4"
                         onerror="this.onerror=null; this.src='https://placehold.co/1200x400/93c5fd/ffffff?text=Image+Load+Error';"
                     >
                     <img 
                         src="./images/IMG_7627.jpg" 
                         alt="Lab Photo 6" 
-                        class="carousel-image absolute top-0 left-0 w-full h-full object-cover" 
+                        class="carousel-image absolute top-0 left-0 w-full h-full object-contain" 
                         data-index="5"
                         onerror="this.onerror=null; this.src='https://placehold.co/1200x400/93c5fd/ffffff?text=Image+Load+Error';"
                     >
@@ -277,7 +280,7 @@
                 targetPage.classList.remove('hidden');
             }
 
-            // 3. 네비게이션 링크 활성화 상태 업데이트 (선택적)
+            // 3. 네비게이션 링크 활성화 상태 업데이트
             document.querySelectorAll('.nav-link').forEach(link => {
                 link.classList.remove('font-bold', 'text-blue-600', 'bg-gray-100');
                 link.classList.add('text-gray-600');
@@ -288,7 +291,7 @@
                 }
             });
 
-            // URL의 해시를 업데이트하여 새로고침해도 페이지 상태 유지 (선택적)
+            // URL의 해시를 업데이트하여 새로고침해도 페이지 상태 유지
             window.location.hash = pageId;
 
             // 맨 위로 스크롤
@@ -296,7 +299,7 @@
         }
 
         // ==============================================
-        // 캐러셀 (슬라이드 쇼) 로직 추가
+        // 캐러셀 (슬라이드 쇼) 로직
         // ==============================================
         let currentImageIndex = 0;
         let carouselImages = [];
@@ -330,17 +333,28 @@
         }
         
         // ==============================================
-        // 초기 로드 시 페이지 및 캐러셀 설정
+        // 초기 로드 시 페이지 및 캐러셀 설정 & 이벤트 리스너 추가
         // ==============================================
         document.addEventListener('DOMContentLoaded', () => {
+            // 1. 초기 페이지 로드
             const initialPage = window.location.hash ? window.location.hash.substring(1) : 'home';
             showPage(initialPage);
             
-            // 캐러셀 시작
+            // 2. 네비게이션 링크에 이벤트 리스너 추가 (페이지 전환 수정)
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', (event) => {
+                    // 기본 동작 (페이지 맨 위로 이동) 방지 - 이것이 핵심 해결책입니다.
+                    event.preventDefault(); 
+                    const pageId = link.getAttribute('data-page');
+                    showPage(pageId);
+                });
+            });
+
+            // 3. 캐러셀 시작
             startCarousel(); 
         });
 
-        // 브라우저 뒤로 가기/앞으로 가기 버튼 처리
+        // 브라우저 뒤로 가기/앞으로 가기 버튼 처리 (URL 해시 변경 감지)
         window.addEventListener('hashchange', () => {
             const newPage = window.location.hash.substring(1) || 'home';
             showPage(newPage);
