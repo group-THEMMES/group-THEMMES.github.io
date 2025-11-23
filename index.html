@@ -523,68 +523,9 @@
             }
         };
 
-        // Data for team member detail view
-        const teamDetails = {
-            'pi': {
-                name: 'Dr. Seug-Jae Shin',
-                role: 'Principal Investigator',
-                email: 'seungjae.shin@unist.ac.kr',
-                photo: './images/team_pi.jpg',
-                //bio: 'Dr. Seug-Jae Shin leads THEMMES group with research interests in multiscale simulation of (photo-)electrochemical systems and materials modelling. He supervises projects across reaction dynamics, disordered materials, and interphase phenomena.'
-            },
-            'postdoc-john': {
-                name: 'Dr. John Smith',
-                role: 'Postdoctoral Fellow',
-                email: '',
-                photo: 'https://placehold.co/150x150/475569/ffffff?text=PD',
-                bio: 'John is a postdoctoral fellow working on advanced modelling and machine learning approaches for materials simulation.'
-            },
-            'phd-alice': {
-                name: 'Alice Johnson',
-                role: 'Ph.D. Candidate',
-                email: '',
-                photo: 'https://placehold.co/150x150/64748b/ffffff?text=PHD',
-                bio: 'Alice focuses on atomistic simulation and multiscale workflows for electrochemical interfaces.'
-            },
-            'ms-bob': {
-                name: 'Bob Williams',
-                role: "Master's Student",
-                email: '',
-                photo: 'https://placehold.co/150x150/94a3b8/ffffff?text=MS',
-                bio: 'Bob is a master\'s student contributing to data analysis and model development for ongoing projects.'
-            }
-        };
-
-        // Team detail view logic
-        function showTeamDetail(memberId) {
-            const data = teamDetails[memberId];
-            if (!data) return;
-
-            // Populate detail fields
-            document.getElementById('team-detail-name').textContent = data.name;
-            document.getElementById('team-detail-role').textContent = data.role;
-            document.getElementById('team-detail-email').textContent = data.email ? `Email: ${data.email}` : '';
-            document.getElementById('team-detail-bio').textContent = data.bio;
-            const photoEl = document.getElementById('team-detail-photo');
-            if (photoEl) photoEl.src = data.photo;
-
-            // Toggle views
-            const grid = document.getElementById('team-grid');
-            if (grid) grid.classList.add('hidden');
-            const detail = document.getElementById('team-detail-view');
-            if (detail) detail.classList.remove('hidden');
-
-            // Scroll up for user focus
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        function showTeamMainView() {
-            const grid = document.getElementById('team-grid');
-            if (grid) grid.classList.remove('hidden');
-            const detail = document.getElementById('team-detail-view');
-            if (detail) detail.classList.add('hidden');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
+        // Team member profiles are now separate subpages under /team/.
+        // Removed the inline `teamDetails` data and the showTeamDetail/showTeamMainView
+        // functions to avoid redundant, unused code.
 
         // 페이지 전환 로직
         function showPage(pageId) {
