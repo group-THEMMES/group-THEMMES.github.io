@@ -6,6 +6,12 @@
   <title>GiBeom Kim — THEMMES group</title>
   <link rel="icon" type="image/png" href="/homeimage/favi.png">
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --color-lab-primary: #374151;
+      --color-lab-primary-lighter: #e5e7eb;
+    }
+  </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
   <main class="max-w-4xl mx-auto p-8">
@@ -13,24 +19,49 @@
 
     <div class="bg-white p-8 rounded-xl shadow-lg mt-4">
       <div class="flex flex-col md:flex-row items-center gap-6">
-        <img src="../images/team_GB.png" alt="GiBeom" class="w-40 h-40 rounded-full object-cover border-4 border-gray-200">
+        <img src="../images/team_GB.png" alt="GiBeom Kim" class="w-40 h-40 rounded-full object-cover border-4" style="border-color:var(--color-lab-primary-lighter);">
+        
         <div>
           <h1 class="text-3xl font-extrabold">GiBeom Kim</h1>
-          <p class="text-lg font-medium text-gray-700">Undergraduate Researcher</p>
+          <p class="text-lg font-medium" style="color:var(--color-lab-primary);">Undergraduate Researcher</p>
+          
+          <p class="text-sm text-gray-600 mt-2">Email: gibeom.kim@unist.ac.kr</p>
+          
+          <div class="flex gap-4 mt-4">
+            <ul class="flex gap-4 text-base">
+              <li>
+                <a href="https://gibeom-kim-02.github.io/" target="_blank" rel="noopener" title="Personal Website">
+                  <img src="../images/link.png" alt="Website" class="w-7 h-7 inline-block align-middle hover:scale-110 transition" />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/gibeom-kim-0bbb68370/" target="_blank" rel="noopener" title="LinkedIn">
+                  <img src="../images/link.png" alt="LinkedIn" class="w-7 h-7 inline-block align-middle hover:scale-110 transition" />
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/gibeom-kim-02" target="_blank" rel="noopener" title="GitHub">
+                  <img src="../images/github.png" alt="GitHub" class="w-7 h-7 inline-block align-middle hover:scale-110 transition" />
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <section class="mt-6">
-        <h2 class="text-2xl font-bold mb-2">About</h2>
-        <p class="text-gray-700">My goal is to become a researcher who learns steadily, works honestly, and contributes meaningfully.</p>
+      <section class="mt-8 border-t pt-6">
+        <h2 class="text-2xl font-bold mb-3">About</h2>
+        <p class="text-gray-700 leading-relaxed">
+          My goal is to become a researcher who learns steadily, works honestly, and contributes meaningfully.
+        </p>
       </section>
 
-      <section class="mt-6">
-        <h3 class="text-xl font-semibold mb-2">Research Interests</h3>
-        <ul class="list-disc list-inside text-gray-700">
+      <section class="mt-8">
+        <h3 class="text-xl font-semibold mb-3">Research Interests</h3>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
           <li>Charging dynamics</li>
         </ul>
-      </section>  
+      </section>
     </div>
   </main>
 </body>
